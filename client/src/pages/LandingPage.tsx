@@ -60,10 +60,10 @@ export default function LandingPage() {
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 Limited Time Free Offer
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-foreground px-2">
-                Are You Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Take Back Control</span> of Your Time?
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.15] mb-6 text-foreground px-2">
+                Are You Ready to <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Take Back Control</span> of Your Time?
               </h1>
-              <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
+              <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-6">
                 A proven framework to write, research, and submit without burning out.
               </p>
             </motion.div>
@@ -105,7 +105,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <ReasonCard 
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
               title="You’re Getting a $20 Value For $0"
@@ -172,7 +172,7 @@ export default function LandingPage() {
                     className="relative z-10 shadow-[25px_25px_50px_-15px_rgba(0,0,0,0.4)] rounded-sm overflow-hidden border-r-4 border-slate-300"
                   >
                     <img 
-                      src="/book-cover.png" 
+                      src="https://images.gaiusjimedits.com/ebook.png" 
                       alt="Practical Ways To Defeat Procrastination in 2026 Book Cover" 
                       className="w-full h-auto block"
                     />
@@ -238,7 +238,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <TestimonialCard 
               category="Time & Productivity"
               quote="This book helped me reclaim at least 7 hours a week. I finally have my weekends back."
@@ -298,12 +298,12 @@ function ReasonCard({ icon, title, description, delay }: { icon: any, title: str
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: delay * 0.1 }}
-      className="bg-background p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
+      className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
     >
-      <div className="mb-6 p-3 bg-muted w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
+      <div className="mb-4 md:mb-6 p-3 bg-muted w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
-      <h3 className="text-xl font-bold mb-3 font-display">{title}</h3>
+      <h3 className="text-lg md:text-xl font-bold mb-3 font-display">{title}</h3>
       <p className="text-muted-foreground leading-relaxed">
         {description}
       </p>
