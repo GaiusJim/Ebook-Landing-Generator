@@ -175,7 +175,7 @@ export default function LandingPage() {
                     {/* Book Front Cover */}
                     <div className="relative z-20 rounded-sm overflow-hidden">
                       <img 
-                        src="https://images.gaiusjimedits.com/ebook.png" 
+                        src="/ebook-cover.png" 
                         alt="Practical Ways To Defeat Procrastination in 2026" 
                         className="w-full h-auto block"
                       />
