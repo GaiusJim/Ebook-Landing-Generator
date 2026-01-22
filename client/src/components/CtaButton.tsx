@@ -2,13 +2,14 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, Lock, CheckCircle2 } from "lucide-react";
 import { ReactNode } from "react";
 
-interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   variant?: "primary" | "secondary" | "outline";
   size?: "default" | "lg" | "xl";
   icon?: ReactNode;
   subtitle?: string;
   isExternal?: boolean;
   href?: string;
+  isPayhip?: boolean;
 }
 
 export function CtaButton({
@@ -20,6 +21,7 @@ export function CtaButton({
   subtitle,
   isExternal,
   href,
+  isPayhip,
   ...props
 }: CtaButtonProps) {
   
@@ -62,7 +64,9 @@ export function CtaButton({
         href={href}
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? "noopener noreferrer" : undefined}
-        className={cn(baseStyles, variants[variant], sizes[size], className)}
+        className={cn(baseStyles, variants[variant], sizes[size], className, isPayhip && "payhip-buy-button")}
+        data-theme={isPayhip ? "green" : undefined}
+        data-product={isPayhip ? href.split('/').pop() : undefined}
       >
         {content}
       </a>
@@ -72,7 +76,7 @@ export function CtaButton({
   return (
     <button
       className={cn(baseStyles, variants[variant], sizes[size], className)}
-      {...props}
+      {...(props as any)}
     >
       {content}
     </button>

@@ -77,8 +77,8 @@ export default function LandingPage() {
           >
             <CtaButton 
               size="xl" 
-              href="https://ebook.gaiusjimedits.com" 
-              isExternal
+              href="https://payhip.com/b/hoREr" 
+              isPayhip
               icon={<ArrowRight className="w-5 h-5" />}
               subtitle="Instant Access • No Credit Card"
               className="w-full sm:w-auto"
@@ -202,8 +202,8 @@ export default function LandingPage() {
                   <CtaButton 
                     size="xl" 
                     className="w-full shadow-xl"
-                    href="https://ebook.gaiusjimedits.com"
-                    isExternal
+                    href="https://payhip.com/b/hoREr"
+                    isPayhip
                     icon={<ArrowRight />}
                   >
                     save me 10-15 hours a week
