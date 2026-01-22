@@ -159,45 +159,44 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-border/50">
             <div className="grid md:grid-cols-2">
-              <div className="bg-slate-200 p-6 md:p-12 flex items-center justify-center relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-300 to-slate-100 opacity-50" />
-                <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+              <div className="bg-slate-50 p-6 md:p-12 flex items-center justify-center relative overflow-hidden group">
+                <div className="absolute inset-0 bg-white opacity-40" />
                 
-                {/* Enhanced 3D Book Mockup */}
-                <div className="relative z-10 w-full max-w-[280px] py-8">
+                {/* Clean Minimalist 3D Book Mockup */}
+                <div className="relative z-10 w-full max-w-[280px] py-12">
                   <motion.div 
-                    initial={{ rotateY: 25, rotateX: 5, x: 0 }}
-                    whileInView={{ rotateY: -15, rotateX: 2, x: -10 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="relative z-10 shadow-[20px_35px_60px_-15px_rgba(0,0,0,0.5)] rounded-sm preserve-3d"
+                    initial={{ rotateY: 20, rotateX: 5, x: 0 }}
+                    whileInView={{ rotateY: -10, rotateX: 0, x: -5 }}
+                    transition={{ duration: 1.2, ease: "easeOut" }}
+                    className="relative z-10 shadow-[30px_50px_100px_-20px_rgba(0,0,0,0.15)] rounded-[2px] preserve-3d"
                     style={{ transformStyle: 'preserve-3d' }}
                   >
-                    {/* Book Front Cover */}
-                    <div className="relative z-20 rounded-sm overflow-hidden">
+                    {/* Book Front Cover - Clean White Border */}
+                    <div className="relative z-20 rounded-[2px] overflow-hidden bg-white border border-slate-100 shadow-sm">
                       <img 
                         src="/ebook-cover.png" 
                         alt="Practical Ways To Defeat Procrastination in 2026" 
                         className="w-full h-auto block"
                       />
-                      {/* Glossy overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-black/10 pointer-events-none" />
+                      {/* Subtle soft lighting */}
+                      <div className="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/20 pointer-events-none" />
                     </div>
                     
-                    {/* Book Spine (3D Effect) */}
-                    <div className="absolute top-0 right-0 h-full w-[40px] bg-slate-800 origin-left" 
-                         style={{ transform: 'rotateY(90deg) translateZ(0px)', right: '-40px' }}>
-                      <div className="absolute inset-0 bg-gradient-to-b from-slate-700 via-slate-800 to-slate-900" />
+                    {/* Book Spine - Clean White/Light Gray */}
+                    <div className="absolute top-0 right-0 h-full w-[35px] bg-slate-50 origin-left border-y border-slate-100" 
+                         style={{ transform: 'rotateY(90deg) translateZ(0px)', right: '-35px' }}>
+                      <div className="absolute inset-0 bg-gradient-to-r from-slate-200 to-white" />
                     </div>
                     
-                    {/* Pages (Bottom 3D Effect) */}
-                    <div className="absolute bottom-0 left-0 w-full h-[15px] bg-slate-100 origin-top"
-                         style={{ transform: 'rotateX(-90deg) translateZ(0px)', bottom: '-15px' }}>
-                       <div className="w-full h-full bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_3px)] opacity-50" />
+                    {/* Pages Effect - Bottom */}
+                    <div className="absolute bottom-0 left-0 w-full h-[12px] bg-white origin-top"
+                         style={{ transform: 'rotateX(-90deg) translateZ(0px)', bottom: '-12px' }}>
+                       <div className="w-full h-full bg-[repeating-linear-gradient(90deg,transparent,transparent_3px,rgba(0,0,0,0.03)_3px,rgba(0,0,0,0.03)_4px)]" />
                     </div>
                   </motion.div>
                   
-                  {/* Soft Shadow beneath */}
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[110%] h-12 bg-black/30 blur-3xl rounded-[100%] z-0" />
+                  {/* Minimalist Shadow beneath */}
+                  <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[120%] h-16 bg-black/[0.08] blur-3xl rounded-[100%] z-0" />
                 </div>
               </div>
 
