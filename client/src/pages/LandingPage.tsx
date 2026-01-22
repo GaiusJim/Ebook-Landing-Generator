@@ -280,7 +280,7 @@ export default function LandingPage() {
             </a>
           </div>
           <p className="mb-8 max-w-md mx-auto">
-            Helping graduate students and researchers build better systems for work and life.
+            Helping graduate students present their research with clarity and confidence. Professional academic editing services you can trust.
           </p>
           <div className="text-sm">
             &copy; {new Date().getFullYear()} Gaiusjimedits. All rights reserved.
