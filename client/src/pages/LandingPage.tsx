@@ -52,12 +52,12 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4 }}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent-foreground border border-accent/20 mb-8 font-medium text-sm">
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-accent" />
                 Limited Time Free Offer
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.15] mb-6 text-foreground px-2">
@@ -70,10 +70,10 @@ export default function LandingPage() {
           </div>
 
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="flex flex-col md:flex-row items-center justify-center gap-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
+            className="flex flex-col items-center justify-center px-4"
           >
             <CtaButton 
               size="xl" 
@@ -81,7 +81,7 @@ export default function LandingPage() {
               isPayhip
               icon={<ArrowRight className="w-5 h-5" />}
               subtitle="Instant Access • No Credit Card"
-              className="w-full sm:w-auto"
+              className="w-full max-w-md"
             >
               Save me 10-15 hours a week
             </CtaButton>
@@ -163,19 +163,17 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-white opacity-40" />
                 
                 {/* Simple 2D Clean Mockup */}
-                <div className="relative z-10 w-full max-w-[280px] mx-auto">
+                <div className="relative z-10 w-full max-w-[240px] md:max-w-[280px] mx-auto py-4">
                   <div className="relative rounded-lg overflow-hidden shadow-2xl border border-slate-200">
                     <img 
                       src="/ebook-cover.png" 
                       alt="Practical Ways To Defeat Procrastination in 2026" 
                       className="w-full h-auto block"
                     />
-                    {/* Subtle soft lighting overlay for a clean "printed" look */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/10 pointer-events-none" />
                   </div>
                   
                   {/* Simple soft drop shadow */}
-                  <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-12 bg-black/[0.08] blur-3xl rounded-full z-0" />
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-12 bg-black/[0.05] blur-2xl rounded-full z-0" />
                 </div>
               </div>
 
@@ -289,10 +287,10 @@ export default function LandingPage() {
 function ReasonCard({ icon, title, description, delay }: { icon: any, title: string, description: string, delay: number }) {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: delay * 0.1 }}
+      transition={{ duration: 0.4, delay: delay * 0.05 }}
       className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
     >
       <div className="mb-4 md:mb-6 p-3 bg-muted w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
