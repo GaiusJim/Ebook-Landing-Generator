@@ -144,8 +144,8 @@ export default function LandingPage() {
               <CtaButton 
                 variant="primary" 
                 className="w-full"
-                href="https://ebook.gaiusjimedits.com"
-                isExternal
+                href="https://payhip.com/b/hoREr"
+                isPayhip
               >
                 Get It Free Now
               </CtaButton>
