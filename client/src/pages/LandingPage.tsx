@@ -20,7 +20,7 @@ export default function LandingPage() {
   const handleNegativeCta = () => {
     toast({
       title: "Are you sure?",
-      description: "This system has helped 90% of graduate students break the cycle. Dont give up!",
+      description: "This system has helped many graduate students break the cycle. Dont give up!",
       variant: "default",
       duration: 5000,
     });
@@ -34,7 +34,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-display font-bold text-xl tracking-tight">
             <a href="https://gaiusjimedits.com" className="hover:text-primary transition-colors">
-              Gaiusjimedits<span className="text-primary">.</span>
+              Gaiusjimedits
             </a>
           </div>
           <a href="#offer" className="hidden md:block text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
@@ -115,13 +115,13 @@ export default function LandingPage() {
             <ReasonCard 
               icon={<Clock className="w-8 h-8 text-blue-500" />}
               title="Short, Practical & Made for Students"
-              description="Not a 300-page theory book. It’s straight to the point. Finish it within a week and start applying it today—even if you’re overwhelmed."
+              description="Not a 300-page theory book. It’s straight to the point. Finish within a week and start applying it today—even if you’re overwhelmed."
               delay={1}
             />
             <ReasonCard 
               icon={<BrainCircuit className="w-8 h-8 text-purple-500" />}
               title="A Real Solution to a Real Problem"
-              description="65% of grad students struggle with procrastination. You're not lazy; you have need a system. This book gives you the better system you need."
+              description="65% of grad students struggle with procrastination. You’re not lazy; you just need a system. This book gives you the better system you need."
               delay={2}
             />
             <ReasonCard 
@@ -258,7 +258,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 text-center">
           <div className="font-display font-bold text-2xl text-white mb-6">
             <a href="https://gaiusjimedits.com" className="hover:text-primary transition-colors">
-              Gaiusjimedits<span className="text-primary">.</span>
+              Gaiusjimedits
             </a>
           </div>
           <p className="mb-8 max-w-md mx-auto">
