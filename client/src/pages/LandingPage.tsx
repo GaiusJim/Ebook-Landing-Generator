@@ -60,10 +60,10 @@ export default function LandingPage() {
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 Limited Time Free Offer
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-foreground">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-foreground px-2">
                 Are You Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Take Back Control</span> of Your Time?
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
                 A proven framework to write, research, and submit without burning out.
               </p>
             </motion.div>
@@ -81,6 +81,7 @@ export default function LandingPage() {
               isExternal
               icon={<ArrowRight className="w-5 h-5" />}
               subtitle="Instant Access • No Credit Card"
+              className="w-full sm:w-auto"
             >
               Save me 10-15 hours a week
             </CtaButton>
@@ -95,11 +96,11 @@ export default function LandingPage() {
       {/* Reasons Section */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-5xl font-bold mb-4 px-4">
               🔥 5 Reasons You Should Get This Book Today
             </h2>
-            <p className="text-xl text-muted-foreground font-light">
+            <p className="text-lg text-muted-foreground font-light px-4">
               (While It’s Still Free)
             </p>
           </div>
@@ -171,17 +172,17 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              <div className="p-12 flex flex-col justify-center">
-                <div className="mb-8">
-                  <h3 className="text-3xl font-bold mb-2 font-display">Get Full Access Today</h3>
-                  <div className="flex items-center gap-4 mt-4">
-                    <span className="text-4xl font-bold text-destructive line-through opacity-50 decoration-2">$20.00</span>
-                    <span className="text-5xl font-bold text-primary">$0.00</span>
+              <div className="p-6 md:p-12 flex flex-col justify-center">
+                <div className="mb-8 text-center md:text-left">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Get Full Access Today</h3>
+                  <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
+                    <span className="text-3xl md:text-4xl font-bold text-destructive line-through opacity-50 decoration-2">$20.00</span>
+                    <span className="text-4xl md:text-5xl font-bold text-primary">$0.00</span>
                   </div>
                 </div>
 
-                <div className="mb-8">
-                  <p className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-2">Offer Ends In:</p>
+                <div className="mb-8 w-full">
+                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-2 text-center md:text-left">Offer Ends In:</p>
                   <CountdownTimer />
                 </div>
 

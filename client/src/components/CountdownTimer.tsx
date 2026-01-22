@@ -34,13 +34,13 @@ export function CountdownTimer() {
   }, []);
 
   return (
-    <div className="flex gap-4 justify-center py-6">
+    <div className="flex gap-2 sm:gap-4 justify-center py-4 md:py-6">
       <TimeUnit value={timeLeft.days} label="Days" />
-      <div className="text-3xl font-bold text-foreground/20 mt-2">:</div>
+      <div className="text-xl sm:text-3xl font-bold text-foreground/20 mt-2">:</div>
       <TimeUnit value={timeLeft.hours} label="Hours" />
-      <div className="text-3xl font-bold text-foreground/20 mt-2">:</div>
+      <div className="text-xl sm:text-3xl font-bold text-foreground/20 mt-2">:</div>
       <TimeUnit value={timeLeft.minutes} label="Mins" />
-      <div className="text-3xl font-bold text-foreground/20 mt-2">:</div>
+      <div className="text-xl sm:text-3xl font-bold text-foreground/20 mt-2">:</div>
       <TimeUnit value={timeLeft.seconds} label="Secs" />
     </div>
   );
@@ -49,12 +49,12 @@ export function CountdownTimer() {
 function TimeUnit({ value, label }: { value: number, label: string }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="bg-white shadow-inner border border-border/50 rounded-lg w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-2">
-        <span className="text-2xl md:text-4xl font-bold font-mono text-primary">
+      <div className="bg-white shadow-inner border border-border/50 rounded-lg w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center mb-1 sm:mb-2">
+        <span className="text-lg sm:text-2xl md:text-4xl font-bold font-mono text-primary">
           {value.toString().padStart(2, '0')}
         </span>
       </div>
-      <span className="text-xs uppercase tracking-wider text-muted-foreground font-medium">{label}</span>
+      <span className="text-[10px] sm:text-xs uppercase tracking-wider text-muted-foreground font-medium">{label}</span>
     </div>
   );
 }
