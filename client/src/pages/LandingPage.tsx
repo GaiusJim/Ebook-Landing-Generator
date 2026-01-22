@@ -184,17 +184,16 @@ export default function LandingPage() {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <CtaButton 
-                    href="https://payhip.com/b/hoREr" 
-                    isPayhip
-                    className="w-full min-h-[56px] py-3 text-center text-xs font-medium rounded-xl shadow-none"
+                  <button 
+                    onClick={() => window.location.href = "https://payhip.com/b/hoREr"}
+                    className="w-full min-h-[56px] py-3 px-6 text-center text-xs font-medium bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800 rounded-xl shadow-none active:scale-[0.98] transition-all"
                   >
                     save me 10-15 hours a week
-                  </CtaButton>
+                  </button>
                   
                   <button 
                     onClick={handleNegativeCta}
-                    className="w-full min-h-[56px] py-3 text-center text-xs font-medium text-muted-foreground hover:text-destructive transition-colors border border-border rounded-xl"
+                    className="w-full min-h-[56px] py-3 px-6 text-center text-xs font-medium text-muted-foreground hover:text-destructive transition-colors border border-border rounded-xl active:scale-[0.98]"
                   >
                     No, I'll be part of the 65% who struggle
                   </button>
