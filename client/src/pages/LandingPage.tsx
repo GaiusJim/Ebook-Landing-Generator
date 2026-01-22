@@ -109,19 +109,19 @@ export default function LandingPage() {
             <ReasonCard 
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
               title="You’re Getting a $20 Value For $0"
-              description="Books and courses teaching these same systems cost $50+. For a limited time, you get this framework completely free. Save money and save months of stress."
+              description="Books and courses teaching these same systems cost $100+. For a limited time, you get this framework completely free. Save money and save months of stress."
               delay={0}
             />
             <ReasonCard 
               icon={<Clock className="w-8 h-8 text-blue-500" />}
               title="Short, Practical & Made for Students"
-              description="Not a 300-page theory book. It’s straight to the point. Finish it in one sitting and start applying it today—even if you’re overwhelmed."
+              description="Not a 300-page theory book. It’s straight to the point. Finish it within a week and start applying it today—even if you’re overwhelmed."
               delay={1}
             />
             <ReasonCard 
               icon={<BrainCircuit className="w-8 h-8 text-purple-500" />}
               title="A Real Solution to a Real Problem"
-              description="65% of grad students struggle with procrastination. You're not lazy; you have a system problem. This book gives you the better system you need."
+              description="65% of grad students struggle with procrastination. You're not lazy; you have need a system. This book gives you the better system you need."
               delay={2}
             />
             <ReasonCard 
@@ -162,11 +162,11 @@ export default function LandingPage() {
               <div className="bg-slate-50 p-6 md:p-12 flex items-center justify-center relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white opacity-40" />
                 
-                {/* Simple 2D Clean Mockup */}
+                {/* Simple 2D Clean Image */}
                 <div className="relative z-10 w-full max-w-[240px] md:max-w-[280px] mx-auto py-4">
                   <div className="relative rounded-lg overflow-hidden shadow-2xl border border-slate-200">
                     <img 
-                      src="/ebook-cover.png" 
+                      src="https://images.gaiusjimedits.com/ebook.png" 
                       alt="Practical Ways To Defeat Procrastination in 2026" 
                       className="w-full h-auto block"
                     />
@@ -224,7 +224,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              ⭐ What People Are Saying
+              What People Are Saying
             </h2>
             <p className="text-xl text-muted-foreground">
               Join hundreds of students reclaiming their time.
