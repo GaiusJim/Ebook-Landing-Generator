@@ -163,24 +163,41 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-300 to-slate-100 opacity-50" />
                 <div className="absolute inset-0 bg-grid-pattern opacity-10" />
                 
-                {/* 3D Book Mockup */}
-                <div className="relative z-10 w-full max-w-[300px] perspective-1000">
+                {/* Enhanced 3D Book Mockup */}
+                <div className="relative z-10 w-full max-w-[280px] py-8">
                   <motion.div 
-                    initial={{ rotateY: 20, rotateX: 5 }}
-                    whileInView={{ rotateY: -15, rotateX: 2 }}
+                    initial={{ rotateY: 25, rotateX: 5, x: 0 }}
+                    whileInView={{ rotateY: -15, rotateX: 2, x: -10 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="relative z-10 shadow-[25px_25px_50px_-15px_rgba(0,0,0,0.4)] rounded-sm overflow-hidden border-r-4 border-slate-300"
+                    className="relative z-10 shadow-[20px_35px_60px_-15px_rgba(0,0,0,0.5)] rounded-sm preserve-3d"
+                    style={{ transformStyle: 'preserve-3d' }}
                   >
-                    <img 
-                      src="https://images.gaiusjimedits.com/ebook.png" 
-                      alt="Practical Ways To Defeat Procrastination in 2026 Book Cover" 
-                      className="w-full h-auto block"
-                    />
-                    {/* Glossy overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-black/5 pointer-events-none" />
+                    {/* Book Front Cover */}
+                    <div className="relative z-20 rounded-sm overflow-hidden">
+                      <img 
+                        src="https://images.gaiusjimedits.com/ebook.png" 
+                        alt="Practical Ways To Defeat Procrastination in 2026" 
+                        className="w-full h-auto block"
+                      />
+                      {/* Glossy overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-black/10 pointer-events-none" />
+                    </div>
+                    
+                    {/* Book Spine (3D Effect) */}
+                    <div className="absolute top-0 right-0 h-full w-[40px] bg-slate-800 origin-left" 
+                         style={{ transform: 'rotateY(90deg) translateZ(0px)', right: '-40px' }}>
+                      <div className="absolute inset-0 bg-gradient-to-b from-slate-700 via-slate-800 to-slate-900" />
+                    </div>
+                    
+                    {/* Pages (Bottom 3D Effect) */}
+                    <div className="absolute bottom-0 left-0 w-full h-[15px] bg-slate-100 origin-top"
+                         style={{ transform: 'rotateX(-90deg) translateZ(0px)', bottom: '-15px' }}>
+                       <div className="w-full h-full bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_3px)] opacity-50" />
+                    </div>
                   </motion.div>
-                  {/* Shadow beneath */}
-                  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90%] h-8 bg-black/20 blur-2xl rounded-[100%] z-0" />
+                  
+                  {/* Soft Shadow beneath */}
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[110%] h-12 bg-black/30 blur-3xl rounded-[100%] z-0" />
                 </div>
               </div>
 
