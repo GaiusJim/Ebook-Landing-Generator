@@ -9,9 +9,9 @@ export function CountdownTimer() {
   });
 
   useEffect(() => {
-    // Simulate a deadline 3 days from now for urgency
+    // Set deadline to 1 month from now
     const deadline = new Date();
-    deadline.setDate(deadline.getDate() + 3);
+    deadline.setMonth(deadline.getMonth() + 1);
     
     const timer = setInterval(() => {
       const now = new Date();

@@ -33,7 +33,9 @@ export default function LandingPage() {
       <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-display font-bold text-xl tracking-tight">
-            Practic<span className="text-primary">.</span>
+            <a href="https://gaiusjimedits.com" className="hover:text-primary transition-colors">
+              Gaiusjimedits<span className="text-primary">.</span>
+            </a>
           </div>
           <a href="#offer" className="hidden md:block text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
             Get the Free Ebook
@@ -85,7 +87,6 @@ export default function LandingPage() {
           </motion.div>
           
           <div className="mt-8 text-center text-sm text-muted-foreground flex items-center justify-center gap-6">
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-primary" /> Used by 1,200+ Students</span>
             <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-primary" /> Proven System</span>
           </div>
         </div>
@@ -157,27 +158,16 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-border/50">
             <div className="grid md:grid-cols-2">
-              <div className="bg-slate-100 p-12 flex items-center justify-center relative overflow-hidden group">
+              <div className="bg-slate-100 p-8 md:p-12 flex items-center justify-center relative overflow-hidden group">
                 <div className="absolute inset-0 bg-grid-pattern opacity-10" />
                 
-                {/* Book Cover Placeholder */}
-                {/* Book cover, productivity, minimalism */}
-                <div className="relative z-10 w-64 aspect-[2/3] bg-white rounded-r-lg shadow-[20px_20px_60px_-15px_rgba(0,0,0,0.3)] transform transition-transform duration-500 group-hover:scale-105 group-hover:-rotate-2 flex flex-col overflow-hidden">
-                  <div className="h-full w-full bg-gradient-to-br from-slate-800 to-slate-900 p-6 flex flex-col justify-between text-white relative">
-                    <div className="absolute top-0 right-0 p-4 opacity-20">
-                      <Clock size={100} />
-                    </div>
-                    <div className="mt-8">
-                      <div className="text-xs tracking-[0.2em] uppercase mb-2 opacity-70">The Guide</div>
-                      <h3 className="font-display text-3xl font-bold leading-tight">Focus &<br/>Finish</h3>
-                    </div>
-                    <div className="mb-4">
-                      <div className="w-12 h-1 bg-white/30 mb-2"></div>
-                      <p className="text-xs opacity-70">A practical framework for students.</p>
-                    </div>
-                  </div>
-                  {/* Book spine effect */}
-                  <div className="absolute left-0 top-0 bottom-0 w-3 bg-gradient-to-r from-white/20 to-transparent z-20"></div>
+                {/* Book Cover */}
+                <div className="relative z-10 w-full max-w-[280px] aspect-[2/3] transform transition-transform duration-500 group-hover:scale-105 group-hover:-rotate-2 flex flex-col overflow-hidden rounded-lg shadow-[20px_20px_60px_-15px_rgba(0,0,0,0.3)]">
+                  <img 
+                    src="/book-cover.png" 
+                    alt="Practical Ways To Defeat Procrastination in 2026 Book Cover" 
+                    className="w-full h-full object-contain bg-white"
+                  />
                 </div>
               </div>
 
@@ -271,12 +261,16 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
         <div className="container mx-auto px-4 text-center">
-          <div className="font-display font-bold text-2xl text-white mb-6">Practic.</div>
+          <div className="font-display font-bold text-2xl text-white mb-6">
+            <a href="https://gaiusjimedits.com" className="hover:text-primary transition-colors">
+              Gaiusjimedits<span className="text-primary">.</span>
+            </a>
+          </div>
           <p className="mb-8 max-w-md mx-auto">
             Helping graduate students and researchers build better systems for work and life.
           </p>
           <div className="text-sm">
-            &copy; {new Date().getFullYear()} Gaius Jim Edits. All rights reserved.
+            &copy; {new Date().getFullYear()} Gaiusjimedits. All rights reserved.
           </div>
         </div>
       </footer>

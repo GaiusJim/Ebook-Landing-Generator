@@ -36,11 +36,10 @@ export function TestimonialCard({ quote, author, role, category, delay = 0 }: Te
       </blockquote>
       
       <div className="mt-auto border-t border-border/50 pt-4 flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-display text-xl">
-          {author.charAt(0)}
+        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-display text-xl uppercase">
+          {category.charAt(0)}
         </div>
         <div>
-          <div className="font-bold text-foreground font-display">{author}</div>
           <div className="text-sm text-muted-foreground">{role}</div>
         </div>
       </div>
