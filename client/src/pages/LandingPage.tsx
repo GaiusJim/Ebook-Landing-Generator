@@ -185,11 +185,9 @@ export default function LandingPage() {
 
                 <div className="flex flex-col gap-3">
                   <CtaButton 
-                    size="lg" 
-                    className="w-full shadow-lg min-h-[56px] py-3 text-sm"
-                    href="https://payhip.com/b/hoREr"
+                    href="https://payhip.com/b/hoREr" 
                     isPayhip
-                    icon={<ArrowRight className="w-4 h-4" />}
+                    className="w-full min-h-[56px] py-3 text-center text-xs font-medium rounded-xl shadow-none"
                   >
                     save me 10-15 hours a week
                   </CtaButton>
