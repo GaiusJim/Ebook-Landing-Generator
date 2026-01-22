@@ -162,57 +162,20 @@ export default function LandingPage() {
               <div className="bg-slate-50 p-6 md:p-12 flex items-center justify-center relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white opacity-40" />
                 
-                {/* High-Quality Realistic 3D Book Mockup */}
-                <div className="relative z-10 w-full max-w-[280px] py-12 perspective-1000">
-                  <motion.div 
-                    initial={{ rotateY: 25, rotateX: 5 }}
-                    whileInView={{ rotateY: -22, rotateX: 6 }}
-                    transition={{ duration: 1.4, ease: "easeOut" }}
-                    className="relative z-10 shadow-[30px_50px_100px_-20px_rgba(0,0,0,0.4)] preserve-3d"
-                    style={{ transformStyle: 'preserve-3d' }}
-                  >
-                    {/* BOOK BODY DESIGN (The structural "Book") */}
-                    {/* Front Cover Container */}
-                    <div className="relative z-20 rounded-[2px] bg-white overflow-hidden shadow-sm"
-                         style={{ transform: 'translateZ(20px)' }}>
-                      {/* THE DESIGN (Replacing just the front) */}
-                      <img 
-                        src="/ebook-cover.png" 
-                        alt="Practical Ways To Defeat Procrastination in 2026" 
-                        className="w-full h-auto block"
-                      />
-                      {/* Realistic book texture/sheen on top of design */}
-                      <div className="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/20 pointer-events-none" />
-                      {/* Spine Crease / Hinge Detail */}
-                      <div className="absolute top-0 left-0 w-3 h-full bg-gradient-to-r from-black/10 to-transparent pointer-events-none" />
-                    </div>
-
-                    {/* Book Spine (Left side) */}
-                    <div className="absolute top-0 left-0 h-full w-[40px] bg-white origin-left border-y border-slate-100 shadow-inner" 
-                         style={{ transform: 'rotateY(-90deg) translateZ(0px)' }}>
-                      <div className="absolute inset-0 bg-gradient-to-r from-slate-100 to-white" />
-                      {/* Spine detail lines */}
-                      <div className="absolute top-4 left-0 w-full h-px bg-slate-200" />
-                      <div className="absolute bottom-4 left-0 w-full h-px bg-slate-200" />
-                    </div>
-
-                    {/* Page Edges (Right side) */}
-                    <div className="absolute top-0 right-0 h-full w-[40px] bg-[#fafafa] origin-right"
-                         style={{ transform: 'rotateY(90deg) translateZ(0px)', right: '-40px' }}>
-                       <div className="w-full h-full bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.04)_2px,rgba(0,0,0,0.04)_3px)]" />
-                       <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-transparent" />
-                    </div>
-
-                    {/* Page Edges (Bottom) */}
-                    <div className="absolute bottom-0 left-0 w-full h-[40px] bg-[#f5f5f5] origin-top"
-                         style={{ transform: 'rotateX(-90deg) translateZ(0px)', bottom: '-40px' }}>
-                       <div className="w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.04)_2px,rgba(0,0,0,0.04)_3px)]" />
-                       <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-transparent" />
-                    </div>
-                  </motion.div>
+                {/* Simple 2D Clean Mockup */}
+                <div className="relative z-10 w-full max-w-[280px] mx-auto">
+                  <div className="relative rounded-lg overflow-hidden shadow-2xl border border-slate-200">
+                    <img 
+                      src="/ebook-cover.png" 
+                      alt="Practical Ways To Defeat Procrastination in 2026" 
+                      className="w-full h-auto block"
+                    />
+                    {/* Subtle soft lighting overlay for a clean "printed" look */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/10 pointer-events-none" />
+                  </div>
                   
-                  {/* Soft Realistic Contact Shadow */}
-                  <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[110%] h-16 bg-black/20 blur-3xl rounded-[100%] z-0" />
+                  {/* Simple soft drop shadow */}
+                  <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-12 bg-black/[0.08] blur-3xl rounded-full z-0" />
                 </div>
               </div>
 
