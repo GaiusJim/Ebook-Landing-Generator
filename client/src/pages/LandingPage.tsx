@@ -172,39 +172,43 @@ export default function LandingPage() {
                     style={{ transformStyle: 'preserve-3d' }}
                   >
                     {/* Book Front Cover */}
-                    <div className="relative z-20 rounded-sm overflow-hidden bg-white">
+                    <div className="relative z-20 rounded-sm overflow-hidden bg-white shadow-inner">
                       <img 
                         src="/ebook-cover.png" 
                         alt="Practical Ways To Defeat Procrastination in 2026" 
                         className="w-full h-auto block"
                       />
                       {/* Realistic book texture/sheen */}
-                      <div className="absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/30 pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-tr from-black/5 via-transparent to-white/20 pointer-events-none" />
                       {/* Spine crease */}
                       <div className="absolute top-0 left-0 w-4 h-full bg-gradient-to-r from-black/10 to-transparent pointer-events-none" />
                     </div>
                     
                     {/* Book Spine (The "Side" of the book) */}
-                    <div className="absolute top-0 left-0 h-full w-[40px] bg-[#f8f9fa] origin-left border-y border-slate-200" 
+                    <div className="absolute top-0 left-0 h-full w-[40px] bg-white origin-left border-y border-slate-100" 
                          style={{ transform: 'rotateY(-90deg) translateZ(0px)' }}>
-                      <div className="absolute inset-0 bg-gradient-to-r from-slate-200 to-white" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-slate-50 to-white" />
+                      {/* Subtle spine text placeholder / detail */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-10">
+                        <div className="w-1 h-2/3 bg-slate-400 rounded-full" />
+                      </div>
                     </div>
                     
                     {/* Pages (The "Right" edge) */}
-                    <div className="absolute top-0 right-0 h-full w-[40px] bg-white origin-right"
+                    <div className="absolute top-0 right-0 h-full w-[40px] bg-[#fafafa] origin-right"
                          style={{ transform: 'rotateY(90deg) translateZ(0px)', right: '-40px' }}>
-                       <div className="w-full h-full bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.05)_2px,rgba(0,0,0,0.05)_3px)]" />
+                       <div className="w-full h-full bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.03)_2px,rgba(0,0,0,0.03)_3px)]" />
                     </div>
 
                     {/* Pages (The "Bottom" edge) */}
-                    <div className="absolute bottom-0 left-0 w-full h-[40px] bg-[#fdfdfd] origin-top"
+                    <div className="absolute bottom-0 left-0 w-full h-[40px] bg-[#f5f5f5] origin-top"
                          style={{ transform: 'rotateX(-90deg) translateZ(0px)', bottom: '-40px' }}>
-                       <div className="w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.05)_2px,rgba(0,0,0,0.05)_3px)]" />
+                       <div className="w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.03)_2px,rgba(0,0,0,0.03)_3px)]" />
                     </div>
                   </motion.div>
                   
-                  {/* Realistic ground shadow */}
-                  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[110%] h-12 bg-black/20 blur-3xl rounded-[100%] z-0" />
+                  {/* Realistic soft ground shadow */}
+                  <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[115%] h-14 bg-black/15 blur-3xl rounded-[100%] z-0" />
                 </div>
               </div>
 
