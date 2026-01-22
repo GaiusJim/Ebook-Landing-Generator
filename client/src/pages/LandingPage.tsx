@@ -183,20 +183,20 @@ export default function LandingPage() {
                   <CountdownTimer />
                 </div>
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3">
                   <CtaButton 
-                    size="xl" 
-                    className="w-full shadow-xl min-h-[64px]"
+                    size="lg" 
+                    className="w-full shadow-lg min-h-[56px] py-3 text-sm"
                     href="https://payhip.com/b/hoREr"
                     isPayhip
-                    icon={<ArrowRight />}
+                    icon={<ArrowRight className="w-4 h-4" />}
                   >
                     save me 10-15 hours a week
                   </CtaButton>
                   
                   <button 
                     onClick={handleNegativeCta}
-                    className="w-full min-h-[64px] py-4 text-center text-sm font-medium text-muted-foreground hover:text-destructive transition-colors border border-border rounded-xl"
+                    className="w-full min-h-[56px] py-3 text-center text-xs font-medium text-muted-foreground hover:text-destructive transition-colors border border-border rounded-xl"
                   >
                     No, I'll be part of the 65% who struggle
                   </button>
