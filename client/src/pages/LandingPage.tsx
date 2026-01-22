@@ -196,20 +196,16 @@ export default function LandingPage() {
                       <div className="absolute bottom-4 left-0 w-full h-px bg-slate-200" />
                     </div>
 
-                    {/* Back Cover (Slightly visible at edges) */}
-                    <div className="absolute top-0 left-0 w-full h-full bg-slate-50"
-                         style={{ transform: 'translateZ(-20px)' }} />
-
                     {/* Page Edges (Right side) */}
                     <div className="absolute top-0 right-0 h-full w-[40px] bg-[#fafafa] origin-right"
-                         style={{ transform: 'rotateY(90deg) translateZ(-20px)', right: '-40px' }}>
+                         style={{ transform: 'rotateY(90deg) translateZ(0px)', right: '-40px' }}>
                        <div className="w-full h-full bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(0,0,0,0.04)_2px,rgba(0,0,0,0.04)_3px)]" />
                        <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-transparent" />
                     </div>
 
                     {/* Page Edges (Bottom) */}
                     <div className="absolute bottom-0 left-0 w-full h-[40px] bg-[#f5f5f5] origin-top"
-                         style={{ transform: 'rotateX(-90deg) translateZ(-20px)', bottom: '-40px' }}>
+                         style={{ transform: 'rotateX(-90deg) translateZ(0px)', bottom: '-40px' }}>
                        <div className="w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.04)_2px,rgba(0,0,0,0.04)_3px)]" />
                        <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-transparent" />
                     </div>
