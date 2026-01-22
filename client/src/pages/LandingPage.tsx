@@ -186,7 +186,7 @@ export default function LandingPage() {
                 <div className="flex flex-col gap-4">
                   <CtaButton 
                     size="xl" 
-                    className="w-full shadow-xl"
+                    className="w-full shadow-xl min-h-[64px]"
                     href="https://payhip.com/b/hoREr"
                     isPayhip
                     icon={<ArrowRight />}
@@ -196,9 +196,9 @@ export default function LandingPage() {
                   
                   <button 
                     onClick={handleNegativeCta}
-                    className="w-full py-4 text-center text-sm font-medium text-muted-foreground hover:text-destructive transition-colors border border-border rounded-xl"
+                    className="w-full min-h-[64px] py-4 text-center text-sm font-medium text-muted-foreground hover:text-destructive transition-colors border border-border rounded-xl"
                   >
-                    No, I'll be part of the 90% who struggle
+                    No, I'll be part of the 65% who struggle
                   </button>
                 </div>
                 
