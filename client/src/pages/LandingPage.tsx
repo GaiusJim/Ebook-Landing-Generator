@@ -20,7 +20,7 @@ export default function LandingPage() {
   const handleNegativeCta = () => {
     toast({
       title: "Are you sure?",
-      description: "The system has helped 65% of students break the cycle. Don't give up!",
+      description: "This system has helped 90% of graduate students break the cycle. Dont give up!",
       variant: "default",
       duration: 5000,
     });
@@ -159,21 +159,13 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-border/50">
             <div className="grid md:grid-cols-2">
-              <div className="bg-slate-50 p-6 md:p-12 flex items-center justify-center relative overflow-hidden group">
-                <div className="absolute inset-0 bg-white opacity-40" />
-                
-                {/* Simple 2D Clean Image */}
-                <div className="relative z-10 w-full max-w-[240px] md:max-w-[280px] mx-auto py-4">
-                  <div className="relative rounded-lg overflow-hidden shadow-2xl border border-slate-200">
-                    <img 
-                      src="https://images.gaiusjimedits.com/ebook.png" 
-                      alt="Practical Ways To Defeat Procrastination in 2026" 
-                      className="w-full h-auto block"
-                    />
-                  </div>
-                  
-                  {/* Simple soft drop shadow */}
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-12 bg-black/[0.05] blur-2xl rounded-full z-0" />
+              <div className="bg-slate-50 flex items-center justify-center relative overflow-hidden group">
+                <div className="relative z-10 w-full h-full">
+                  <img 
+                    src="https://images.gaiusjimedits.com/ebook.png" 
+                    alt="Practical Ways To Defeat Procrastination in 2026" 
+                    className="w-full h-full object-cover block"
+                  />
                 </div>
               </div>
 
@@ -191,7 +183,7 @@ export default function LandingPage() {
                   <CountdownTimer />
                 </div>
 
-                <div className="space-y-4">
+                <div className="flex flex-col gap-4">
                   <CtaButton 
                     size="xl" 
                     className="w-full shadow-xl"
@@ -204,9 +196,9 @@ export default function LandingPage() {
                   
                   <button 
                     onClick={handleNegativeCta}
-                    className="w-full py-4 text-center text-sm font-medium text-muted-foreground hover:text-destructive transition-colors border border-transparent hover:border-border rounded-xl"
+                    className="w-full py-4 text-center text-sm font-medium text-muted-foreground hover:text-destructive transition-colors border border-border rounded-xl"
                   >
-                    No, I'll be part of the 65% who struggle
+                    No, I'll be part of the 90% who struggle
                   </button>
                 </div>
                 
