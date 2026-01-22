@@ -159,16 +159,28 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-border/50">
             <div className="grid md:grid-cols-2">
-              <div className="bg-slate-100 p-8 md:p-12 flex items-center justify-center relative overflow-hidden group">
+              <div className="bg-slate-200 p-6 md:p-12 flex items-center justify-center relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-300 to-slate-100 opacity-50" />
                 <div className="absolute inset-0 bg-grid-pattern opacity-10" />
                 
-                {/* Book Cover */}
-                <div className="relative z-10 w-full max-w-[280px] aspect-[2/3] transform transition-transform duration-500 group-hover:scale-105 group-hover:-rotate-2 flex flex-col overflow-hidden rounded-lg shadow-[20px_20px_60px_-15px_rgba(0,0,0,0.3)]">
-                  <img 
-                    src="/book-cover.png" 
-                    alt="Practical Ways To Defeat Procrastination in 2026 Book Cover" 
-                    className="w-full h-full object-contain bg-white"
-                  />
+                {/* 3D Book Mockup */}
+                <div className="relative z-10 w-full max-w-[300px] perspective-1000">
+                  <motion.div 
+                    initial={{ rotateY: 20, rotateX: 5 }}
+                    whileInView={{ rotateY: -15, rotateX: 2 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    className="relative z-10 shadow-[25px_25px_50px_-15px_rgba(0,0,0,0.4)] rounded-sm overflow-hidden border-r-4 border-slate-300"
+                  >
+                    <img 
+                      src="/book-cover.png" 
+                      alt="Practical Ways To Defeat Procrastination in 2026 Book Cover" 
+                      className="w-full h-auto block"
+                    />
+                    {/* Glossy overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-black/5 pointer-events-none" />
+                  </motion.div>
+                  {/* Shadow beneath */}
+                  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90%] h-8 bg-black/20 blur-2xl rounded-[100%] z-0" />
                 </div>
               </div>
 
