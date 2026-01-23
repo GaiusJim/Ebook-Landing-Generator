@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { api } from "@shared/routes";
 import { queryClient, apiRequest } from "@/lib/queryClient";
+import type { Timer } from "@shared/schema";
 
 export function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -11,7 +12,7 @@ export function CountdownTimer() {
     seconds: 0
   });
 
-  const { data: timerData, isLoading } = useQuery({
+  const { data: timerData, isLoading } = useQuery<Timer | null>({
     queryKey: [api.timer.get.path],
   });
 
@@ -33,14 +34,10 @@ export function CountdownTimer() {
 
     if (timerData) {
       deadlineDate = new Date(timerData.endTime);
-      if (deadlineDate.getTime() <= new Date().getTime()) {
-        deadlineDate = new Date();
-        deadlineDate.setMonth(deadlineDate.getMonth() + 1);
-        updateTimer.mutate(deadlineDate);
-      }
     } else {
-      deadlineDate = new Date();
-      deadlineDate.setMonth(deadlineDate.getMonth() + 1);
+      // Initialize timer to exactly 30 days from now (no hours, minutes, seconds variance)
+      const now = new Date();
+      deadlineDate = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
       updateTimer.mutate(deadlineDate);
     }
 
@@ -49,6 +46,8 @@ export function CountdownTimer() {
       const difference = deadlineDate.getTime() - now.getTime();
 
       if (difference <= 0) {
+        // Timer expired - show zeros, don't reset
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         clearInterval(timer);
         return;
       }

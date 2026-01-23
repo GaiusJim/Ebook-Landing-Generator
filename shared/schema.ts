@@ -14,7 +14,9 @@ export const timers = pgTable("timers", {
 });
 
 export const insertLeadSchema = createInsertSchema(leads);
-export const insertTimerSchema = createInsertSchema(timers);
+export const insertTimerSchema = createInsertSchema(timers, {
+  endTime: z.string().transform((val) => new Date(val)),
+});
 
 export type Lead = typeof leads.$inferSelect;
 export type InsertLead = z.infer<typeof insertLeadSchema>;
