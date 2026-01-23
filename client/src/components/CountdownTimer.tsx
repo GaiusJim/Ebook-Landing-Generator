@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useQuery, useMutation } from "@tanstack/react-query";
-import { api } from "@shared/routes";
-import { queryClient, apiRequest } from "@/lib/queryClient";
-import type { Timer } from "@shared/schema";
+
+// FIXED END DATE - Set this to exactly 30 days from when you want the timer to start
+// Change this date to set when the offer ends (format: YYYY-MM-DDTHH:MM:SS)
+const TIMER_END_DATE = new Date("2026-02-22T00:00:00");
 
 export function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -12,34 +12,8 @@ export function CountdownTimer() {
     seconds: 0
   });
 
-  const { data: timerData, isLoading } = useQuery<Timer | null>({
-    queryKey: [api.timer.get.path],
-  });
-
-  const updateTimer = useMutation({
-    mutationFn: async (endTime: Date) => {
-      await apiRequest(api.timer.update.method, api.timer.update.path, {
-        endTime: endTime.toISOString()
-      });
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [api.timer.get.path] });
-    }
-  });
-
   useEffect(() => {
-    if (isLoading) return;
-
-    let deadlineDate: Date;
-
-    if (timerData) {
-      deadlineDate = new Date(timerData.endTime);
-    } else {
-      // Initialize timer to exactly 30 days from now (no hours, minutes, seconds variance)
-      const now = new Date();
-      deadlineDate = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
-      updateTimer.mutate(deadlineDate);
-    }
+    const deadlineDate = TIMER_END_DATE;
 
     const timer = setInterval(() => {
       const now = new Date();
@@ -61,11 +35,7 @@ export function CountdownTimer() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [timerData, isLoading]);
-
-  if (isLoading) {
-    return <div className="h-20" />;
-  }
+  }, []);
 
   return (
     <div className="flex gap-2 sm:gap-4 justify-center py-4 md:py-6">
