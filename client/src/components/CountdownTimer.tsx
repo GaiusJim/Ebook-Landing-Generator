@@ -9,13 +9,27 @@ export function CountdownTimer() {
   });
 
   useEffect(() => {
-    // Set deadline to 1 month from now
-    const deadline = new Date();
-    deadline.setMonth(deadline.getMonth() + 1);
+    const STORAGE_KEY = "countdown_deadline";
+    let deadlineStr = localStorage.getItem(STORAGE_KEY);
+    let deadlineDate: Date;
+
+    if (deadlineStr) {
+      deadlineDate = new Date(deadlineStr);
+      // If the saved deadline has already passed, reset it
+      if (deadlineDate.getTime() <= new Date().getTime()) {
+        deadlineDate = new Date();
+        deadlineDate.setMonth(deadlineDate.getMonth() + 1);
+        localStorage.setItem(STORAGE_KEY, deadlineDate.toISOString());
+      }
+    } else {
+      deadlineDate = new Date();
+      deadlineDate.setMonth(deadlineDate.getMonth() + 1);
+      localStorage.setItem(STORAGE_KEY, deadlineDate.toISOString());
+    }
     
     const timer = setInterval(() => {
       const now = new Date();
-      const difference = deadline.getTime() - now.getTime();
+      const difference = deadlineDate.getTime() - now.getTime();
       
       if (difference <= 0) {
         clearInterval(timer);

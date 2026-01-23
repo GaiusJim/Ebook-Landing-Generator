@@ -33,9 +33,6 @@ export default function LandingPage() {
       <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-display font-bold text-xl tracking-tight">
-            <a href="https://gaiusjimedits.com" className="hover:text-primary transition-colors">
-              Gaiusjimedits
-            </a>
           </div>
           <a href="#offer" className="hidden md:block text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
             Get the Free Ebook
@@ -83,7 +80,7 @@ export default function LandingPage() {
               subtitle="Instant Access • No Credit Card"
               className="w-full max-w-md"
             >
-              Save me 10-15 hours a week
+              Start taking back control
             </CtaButton>
           </motion.div>
           
@@ -108,7 +105,7 @@ export default function LandingPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <ReasonCard 
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
-              title="You’re Getting a $20 Value For $0"
+              title="You’re Getting a $100 Value For $0"
               description="Books and courses teaching these same systems cost $100+. For a limited time, you get this framework completely free. Save money and save months of stress."
               delay={0}
             />
@@ -144,8 +141,9 @@ export default function LandingPage() {
               <CtaButton 
                 variant="primary" 
                 className="w-full"
-                href="https://payhip.com/b/hoREr"
-                isPayhip
+                onClick={() => {
+                  document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Get It Free Now
               </CtaButton>
@@ -173,7 +171,7 @@ export default function LandingPage() {
                 <div className="mb-8 text-center md:text-left">
                   <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Get Full Access Today</h3>
                   <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
-                    <span className="text-3xl md:text-4xl font-bold text-destructive line-through opacity-50 decoration-2">$20.00</span>
+                    <span className="text-3xl md:text-4xl font-bold text-destructive line-through opacity-50 decoration-2">$100.00</span>
                     <span className="text-4xl md:text-5xl font-bold text-primary">$0.00</span>
                   </div>
                 </div>
@@ -257,9 +255,6 @@ export default function LandingPage() {
       <footer className="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
         <div className="container mx-auto px-4 text-center">
           <div className="font-display font-bold text-2xl text-white mb-6">
-            <a href="https://gaiusjimedits.com" className="hover:text-primary transition-colors">
-              Gaiusjimedits
-            </a>
           </div>
           <p className="mb-8 max-w-md mx-auto">
             Helping graduate students present their research with clarity and confidence. Professional academic editing services you can trust.
