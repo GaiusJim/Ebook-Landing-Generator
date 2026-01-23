@@ -66,23 +66,7 @@ export default function LandingPage() {
             </motion.div>
           </div>
 
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.4 }}
-            className="flex flex-col items-center justify-center px-4"
-          >
-            <CtaButton 
-              size="xl" 
-              href="https://payhip.com/b/hoREr" 
-              isPayhip
-              icon={<ArrowRight className="w-5 h-5" />}
-              subtitle="Instant Access • No Credit Card"
-              className="w-full max-w-md"
-            >
-              Start taking back control
-            </CtaButton>
-          </motion.div>
+          {/* No CTA here anymore */}
           
           <div className="mt-8 text-center text-sm text-muted-foreground flex items-center justify-center gap-6">
             <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-primary" /> Proven System</span>
