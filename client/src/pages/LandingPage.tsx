@@ -255,6 +255,9 @@ export default function LandingPage() {
       <footer className="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
         <div className="container mx-auto px-4 text-center">
           <div className="font-display font-bold text-2xl text-white mb-6">
+            <a href="https://gaiusjimedits.com" className="hover:text-primary transition-colors">
+              Gaiusjimedits
+            </a>
           </div>
           <p className="mb-8 max-w-md mx-auto">
             Helping graduate students present their research with clarity and confidence. Professional academic editing services you can trust.
