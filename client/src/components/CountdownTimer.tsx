@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import { api } from "@shared/routes";
+import { queryClient, apiRequest } from "@/lib/queryClient";
 
 export function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -8,44 +11,62 @@ export function CountdownTimer() {
     seconds: 0
   });
 
+  const { data: timerData, isLoading } = useQuery({
+    queryKey: [api.timer.get.path],
+  });
+
+  const updateTimer = useMutation({
+    mutationFn: async (endTime: Date) => {
+      await apiRequest(api.timer.update.method, api.timer.update.path, {
+        endTime: endTime.toISOString()
+      });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [api.timer.get.path] });
+    }
+  });
+
   useEffect(() => {
-    const STORAGE_KEY = "countdown_deadline";
-    let deadlineStr = localStorage.getItem(STORAGE_KEY);
+    if (isLoading) return;
+
     let deadlineDate: Date;
 
-    if (deadlineStr) {
-      deadlineDate = new Date(deadlineStr);
-      // If the saved deadline has already passed, reset it
+    if (timerData) {
+      deadlineDate = new Date(timerData.endTime);
       if (deadlineDate.getTime() <= new Date().getTime()) {
         deadlineDate = new Date();
         deadlineDate.setMonth(deadlineDate.getMonth() + 1);
-        localStorage.setItem(STORAGE_KEY, deadlineDate.toISOString());
+        updateTimer.mutate(deadlineDate);
       }
     } else {
       deadlineDate = new Date();
       deadlineDate.setMonth(deadlineDate.getMonth() + 1);
-      localStorage.setItem(STORAGE_KEY, deadlineDate.toISOString());
+      updateTimer.mutate(deadlineDate);
     }
-    
+
     const timer = setInterval(() => {
       const now = new Date();
       const difference = deadlineDate.getTime() - now.getTime();
-      
+
       if (difference <= 0) {
         clearInterval(timer);
         return;
       }
-      
+
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
       const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((difference / 1000 / 60) % 60);
       const seconds = Math.floor((difference / 1000) % 60);
-      
+
       setTimeLeft({ days, hours, minutes, seconds });
     }, 1000);
-    
+
     return () => clearInterval(timer);
-  }, []);
+  }, [timerData, isLoading]);
+
+  if (isLoading) {
+    return <div className="h-20" />;
+  }
 
   return (
     <div className="flex gap-2 sm:gap-4 justify-center py-4 md:py-6">

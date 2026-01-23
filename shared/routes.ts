@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { insertLeadSchema, leads } from './schema';
+import { insertLeadSchema, leads, timers, insertTimerSchema } from './schema';
 
 export const errorSchemas = {
   validation: z.object({
@@ -18,6 +18,24 @@ export const api = {
       input: insertLeadSchema,
       responses: {
         201: z.custom<typeof leads.$inferSelect>(),
+        400: errorSchemas.validation,
+      },
+    },
+  },
+  timer: {
+    get: {
+      method: 'GET' as const,
+      path: '/api/timer',
+      responses: {
+        200: z.custom<typeof timers.$inferSelect | null>(),
+      },
+    },
+    update: {
+      method: 'POST' as const,
+      path: '/api/timer',
+      input: insertTimerSchema,
+      responses: {
+        200: z.custom<typeof timers.$inferSelect>(),
         400: errorSchemas.validation,
       },
     },

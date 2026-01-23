@@ -8,12 +8,29 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Although the landing page primarily links out, we have a route ready if needed
   app.post(api.leads.create.path, async (req, res) => {
     try {
       const input = api.leads.create.input.parse(req.body);
       const lead = await storage.createLead(input);
       res.status(201).json(lead);
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        return res.status(400).json({ message: err.errors[0].message });
+      }
+      throw err;
+    }
+  });
+
+  app.get(api.timer.get.path, async (_req, res) => {
+    const timer = await storage.getTimer();
+    res.json(timer || null);
+  });
+
+  app.post(api.timer.update.path, async (req, res) => {
+    try {
+      const input = api.timer.update.input.parse(req.body);
+      const timer = await storage.setTimer(input);
+      res.json(timer);
     } catch (err) {
       if (err instanceof z.ZodError) {
         return res.status(400).json({ message: err.errors[0].message });
