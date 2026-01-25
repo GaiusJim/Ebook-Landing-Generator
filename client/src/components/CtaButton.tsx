@@ -2,6 +2,13 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, Lock, CheckCircle2 } from "lucide-react";
 import { ReactNode } from "react";
 
+// Subtle haptic feedback for mobile
+const triggerHaptic = () => {
+  if (typeof navigator !== 'undefined' && navigator.vibrate) {
+    navigator.vibrate(10); // Very subtle 10ms vibration
+  }
+};
+
 interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   variant?: "primary" | "secondary" | "outline";
   size?: "default" | "lg" | "xl";
@@ -67,6 +74,7 @@ export function CtaButton({
         className={cn(baseStyles, variants[variant], sizes[size], className, isPayhip && "payhip-buy-button")}
         data-theme={isPayhip ? "green" : undefined}
         data-product={isPayhip ? href.split('/').pop() : undefined}
+        onClick={triggerHaptic}
       >
         {content}
       </a>
@@ -77,6 +85,10 @@ export function CtaButton({
     <button
       className={cn(baseStyles, variants[variant], sizes[size], className)}
       {...(props as any)}
+      onClick={(e) => {
+        triggerHaptic();
+        if (props.onClick) (props.onClick as any)(e);
+      }}
     >
       {content}
     </button>
