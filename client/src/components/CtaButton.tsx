@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, Lock, CheckCircle2 } from "lucide-react";
 import { ReactNode } from "react";
 
-// Subtle haptic feedback for mobile
+// Subtle haptic feedback for mobile - triggered on touch start for immediate response
 const triggerHaptic = () => {
   if (typeof navigator !== 'undefined' && navigator.vibrate) {
-    navigator.vibrate(10); // Very subtle 10ms vibration
+    navigator.vibrate(15);
   }
 };
 
@@ -32,7 +32,7 @@ export function CtaButton({
   ...props
 }: CtaButtonProps) {
   
-  const baseStyles = "inline-flex flex-col items-center justify-center rounded-xl font-bold transition-all duration-300 transform active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed group relative overflow-hidden";
+  const baseStyles = "inline-flex flex-col items-center justify-center rounded-xl font-bold transition-transform transition-shadow duration-200 ease-out transform active:scale-[0.97] disabled:opacity-70 disabled:cursor-not-allowed group relative overflow-hidden will-change-transform";
   
   const variants = {
     primary: "bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white shadow-xl shadow-green-900/20 hover:shadow-2xl hover:shadow-green-900/30 hover:-translate-y-1 border-b-4 border-green-800",
@@ -58,9 +58,9 @@ export function CtaButton({
         </span>
       )}
       
-      {/* Shine effect for primary buttons */}
+      {/* Subtle shine effect for primary buttons - only on hover, no infinite loop */}
       {variant === 'primary' && (
-        <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
+        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out bg-gradient-to-r from-transparent via-white/15 to-transparent z-0" />
       )}
     </>
   );
@@ -74,7 +74,7 @@ export function CtaButton({
         className={cn(baseStyles, variants[variant], sizes[size], className, isPayhip && "payhip-buy-button")}
         data-theme={isPayhip ? "green" : undefined}
         data-product={isPayhip ? href.split('/').pop() : undefined}
-        onClick={triggerHaptic}
+        onTouchStart={triggerHaptic}
       >
         {content}
       </a>
@@ -85,10 +85,7 @@ export function CtaButton({
     <button
       className={cn(baseStyles, variants[variant], sizes[size], className)}
       {...(props as any)}
-      onClick={(e) => {
-        triggerHaptic();
-        if (props.onClick) (props.onClick as any)(e);
-      }}
+      onTouchStart={triggerHaptic}
     >
       {content}
     </button>

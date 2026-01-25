@@ -49,9 +49,9 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent-foreground border border-accent/20 mb-8 font-medium text-sm">
                 <span className="w-2 h-2 rounded-full bg-accent" />
@@ -259,13 +259,13 @@ export default function LandingPage() {
 function ReasonCard({ icon, title, description, delay }: { icon: any, title: string, description: string, delay: number }) {
   return (
     <motion.div 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: delay * 0.05 }}
-      className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.3, delay: delay * 0.08, ease: "easeOut" }}
+      className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-[border-color,box-shadow] duration-200 ease-out group will-change-transform"
     >
-      <div className="mb-4 md:mb-6 p-3 bg-muted w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
+      <div className="mb-4 md:mb-6 p-3 bg-muted w-fit rounded-xl group-hover:scale-105 transition-transform duration-200 ease-out will-change-transform">
         {icon}
       </div>
       <h3 className="text-lg md:text-xl font-bold mb-3 font-display">{title}</h3>
