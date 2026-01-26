@@ -166,13 +166,6 @@ export default function LandingPage() {
                   <CountdownTimer />
                 </div>
 
-                <div className="flex flex-col gap-3">
-                  <button 
-                    onClick={() => window.location.href = "https://payhip.com/b/hoREr"}
-                    className="w-full min-h-[56px] py-3 px-6 text-center text-xs font-medium bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800 rounded-xl shadow-none active:scale-[0.98] transition-all"
-                  >
-                    save me 10-15 hours a week
-                  </button>
                   
                   <button 
                     onClick={handleNegativeCta}
