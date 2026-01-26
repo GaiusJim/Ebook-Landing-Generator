@@ -26,16 +26,6 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       
-      {/* Navigation / Header */}
-      <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="font-display font-bold text-xl tracking-tight">
-          </div>
-          <a href="#offer" className="hidden md:block text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
-            Get the Free Ebook
-          </a>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
@@ -63,9 +53,6 @@ export default function LandingPage() {
             </motion.div>
           </div>
 
-          <div className="mt-8 text-center text-sm text-muted-foreground flex items-center justify-center gap-6">
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-primary" /> Proven System</span>
-          </div>
         </div>
       </section>
 
