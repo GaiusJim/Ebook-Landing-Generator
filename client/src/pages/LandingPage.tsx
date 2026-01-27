@@ -38,7 +38,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+      <section className="relative pt-20 md:pt-32 pb-20 md:pb-32 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
@@ -54,7 +54,7 @@ export default function LandingPage() {
                 <span className="w-2 h-2 rounded-full bg-accent" />
                 Limited Time Free Offer
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.15] mb-6 text-foreground px-2">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-[1.25] mb-6 text-foreground px-2">
                 Are You Ready to <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Take Back Control</span> of Your Time?
               </h1>
               <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-6">
