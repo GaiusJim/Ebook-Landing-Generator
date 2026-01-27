@@ -115,7 +115,7 @@ export default function LandingPage() {
             />
             
             {/* CTA in the grid */}
-            <div className="bg-foreground text-background p-8 rounded-2xl flex flex-col justify-center items-center text-center shadow-xl">
+            <div className="bg-[#1A2B48] text-background p-8 rounded-2xl flex flex-col justify-center items-center text-center shadow-xl">
               <h3 className="text-2xl font-bold mb-4 text-white">Stop Paying with Stress</h3>
               <p className="mb-6 opacity-80">You’re already paying for procrastination. Right now, fixing it costs nothing.</p>
               <CtaButton 
@@ -232,7 +232,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
+      <footer className="py-12 bg-[#1A2B48] text-slate-400 border-t border-slate-800">
         <div className="container mx-auto px-4 text-center">
           <div className="font-display font-bold text-2xl text-white mb-6">
             <a href="https://gaiusjimedits.com" className="hover:text-primary transition-colors">
