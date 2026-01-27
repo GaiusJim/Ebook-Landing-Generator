@@ -28,7 +28,7 @@ export default function LandingPage() {
       
       {/* Navigation / Header */}
       <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40 hidden md:block">
-        <div className="container mx-auto px-4 h-12 flex items-center justify-between">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-display font-bold text-xl tracking-tight">
           </div>
           <a href="#offer" className="block text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
@@ -54,7 +54,7 @@ export default function LandingPage() {
                 <span className="w-2 h-2 rounded-full bg-accent" />
                 Limited Time Free Offer
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.3] mb-6 text-foreground px-2">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.15] mb-6 text-foreground px-2">
                 Are You Ready to <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Take Back Control</span> of Your Time?
               </h1>
               <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-6">
