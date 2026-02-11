@@ -7,6 +7,10 @@ import {
   BookOpen, 
   ShieldCheck, 
   BrainCircuit, 
+  ArrowRight,
+  Menu,
+  X,
+  Star
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
@@ -85,7 +89,7 @@ export default function LandingPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <ReasonCard 
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
-              title="You’re Getting a $100 Value For $20"
+              title="You’re Getting a <span class='text-red-600 font-bold opacity-100'>$100</span> Value For $20"
               description="Books and courses teaching these same systems cost $100+. For a limited time, you get this framework completely free. Save money and save months of stress."
               delay={0}
             />
@@ -151,14 +155,25 @@ export default function LandingPage() {
                 <div className="mb-8 text-center md:text-left">
                   <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Get Full Access Today</h3>
                   <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
-                    <span className="text-3xl md:text-4xl font-bold text-destructive line-through opacity-50 decoration-2">$100.00</span>
+                    <span className="text-3xl md:text-4xl font-bold text-red-600 line-through opacity-80 decoration-2">$100.00</span>
                     <span className="text-4xl md:text-5xl font-bold text-primary">$20.00</span>
                   </div>
                 </div>
 
                 <div className="mb-8 w-full">
-                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-2 text-center md:text-left">Offer Ends In:</p>
-                  <CountdownTimer />
+                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-2 text-center md:text-left">RATINGS</p>
+                  <div className="flex gap-1 justify-center md:justify-start py-4">
+                    {[1, 2, 3, 4].map((i) => (
+                      <Star key={i} className="w-6 h-6 fill-yellow-500 text-yellow-500" />
+                    ))}
+                    <div className="relative w-6 h-6">
+                      <Star className="w-6 h-6 text-yellow-500" />
+                      <div className="absolute inset-0 overflow-hidden w-[50%]">
+                        <Star className="w-6 h-6 fill-yellow-500 text-yellow-500" />
+                      </div>
+                    </div>
+                    <span className="ml-2 font-bold text-lg">4.5</span>
+                  </div>
                 </div>
 
                 <div className="flex flex-col gap-3">
@@ -166,7 +181,7 @@ export default function LandingPage() {
                     onClick={() => window.location.href = "https://ebook.gaiusjimedits.com/b/hoREr/af697751fa02bf6"}
                     className="w-full min-h-[56px] py-3 px-6 text-center text-xs font-medium bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800 rounded-xl shadow-none active:scale-[0.98] transition-all"
                   >
-                    save me 10-15 hours a week
+                    Save me 8-12 hours a week
                   </button>
                   
                   <button 
@@ -178,7 +193,7 @@ export default function LandingPage() {
                 </div>
                 
                 <p className="mt-6 text-xs text-center text-muted-foreground">
-                  $20 • Secure Download • Instant Access
+                  Secure Download • Instant Access
                 </p>
               </div>
             </div>
