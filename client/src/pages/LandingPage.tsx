@@ -161,18 +161,17 @@ export default function LandingPage() {
                 </div>
 
                 <div className="mb-8 w-full">
-                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-2 text-center md:text-left">RATINGS</p>
-                  <div className="flex gap-1 justify-center md:justify-start py-4">
+                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-2 text-center">RATINGS</p>
+                  <div className="flex gap-2 justify-center py-6">
                     {[1, 2, 3, 4].map((i) => (
-                      <Star key={i} className="w-6 h-6 fill-yellow-500 text-yellow-500" />
+                      <Star key={i} className="w-10 h-10 fill-yellow-500 text-yellow-500" />
                     ))}
-                    <div className="relative w-6 h-6">
-                      <Star className="w-6 h-6 text-yellow-500" />
+                    <div className="relative w-10 h-10">
+                      <Star className="w-10 h-10 text-yellow-500" />
                       <div className="absolute inset-0 overflow-hidden w-[50%]">
-                        <Star className="w-6 h-6 fill-yellow-500 text-yellow-500" />
+                        <Star className="w-10 h-10 fill-yellow-500 text-yellow-500" />
                       </div>
                     </div>
-                    <span className="ml-2 font-bold text-lg">4.5</span>
                   </div>
                 </div>
 
