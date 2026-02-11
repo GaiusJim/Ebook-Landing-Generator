@@ -32,7 +32,7 @@ export default function LandingPage() {
           <div className="font-display font-bold text-xl tracking-tight">
           </div>
           <a href="#offer" className="block text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
-            Get the Free Ebook
+            Get the eBook
           </a>
         </div>
       </nav>
@@ -52,7 +52,7 @@ export default function LandingPage() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent-foreground border border-accent/20 mb-8 font-medium text-sm">
                 <span className="w-2 h-2 rounded-full bg-accent" />
-                Limited Time Free Offer
+                Exclusive Offer
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-[1.4] mb-6 text-foreground px-2">
                 Are You Ready to <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Take Back Control</span> of Your Time?
@@ -78,14 +78,14 @@ export default function LandingPage() {
               🔥 5 Reasons You Should Get This Book Today
             </h2>
             <p className="text-lg text-muted-foreground font-light px-4">
-              (While It’s Still Free)
+              (While It’s Still Affordable)
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <ReasonCard 
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
-              title="You’re Getting a $100 Value For $0"
+              title="You’re Getting a $100 Value For $20"
               description="Books and courses teaching these same systems cost $100+. For a limited time, you get this framework completely free. Save money and save months of stress."
               delay={0}
             />
@@ -110,14 +110,14 @@ export default function LandingPage() {
             <ReasonCard 
               icon={<CheckCircle2 className="w-8 h-8 text-teal-500" />}
               title="Nothing to Lose, Everything to Gain"
-              description="It’s free, short, and practical. Worst case: you get a few ideas. Best case: you finally break the procrastination cycle for good."
+              description="It’s focused, short, and practical. Worst case: you get a few ideas. Best case: you finally break the procrastination cycle for good."
               delay={4}
             />
             
             {/* CTA in the grid */}
             <div className="bg-[#1A2B48] text-background p-8 rounded-2xl flex flex-col justify-center items-center text-center shadow-xl">
               <h3 className="text-2xl font-bold mb-4 text-white">Stop Paying with Stress</h3>
-              <p className="mb-6 opacity-80">You’re already paying for procrastination. Right now, fixing it costs nothing.</p>
+              <p className="mb-6 opacity-80">You’re already paying for procrastination. Right now, fixing it costs less than a Netflix subscription.</p>
               <CtaButton 
                 variant="primary" 
                 className="w-full"
@@ -125,7 +125,7 @@ export default function LandingPage() {
                   document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Get It Free Now
+                Get It Now
               </CtaButton>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function LandingPage() {
                   <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Get Full Access Today</h3>
                   <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
                     <span className="text-3xl md:text-4xl font-bold text-destructive line-through opacity-50 decoration-2">$100.00</span>
-                    <span className="text-4xl md:text-5xl font-bold text-primary">$0.00</span>
+                    <span className="text-4xl md:text-5xl font-bold text-primary">$20.00</span>
                   </div>
                 </div>
 
@@ -178,7 +178,7 @@ export default function LandingPage() {
                 </div>
                 
                 <p className="mt-6 text-xs text-center text-muted-foreground">
-                  100% Free • Secure Download • Instant Access
+                  $20 • Secure Download • Instant Access
                 </p>
               </div>
             </div>
