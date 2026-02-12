@@ -89,7 +89,7 @@ export default function LandingPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <ReasonCard 
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
-              title="You’re Getting a <span class='text-red-600 font-bold opacity-100'>$100</span> Value For $20"
+              title="You’re Getting a $100 Value For $20"
               description="Books and courses teaching these same systems cost $100+. For a limited time, you get this framework completely free. Save money and save months of stress."
               delay={0}
             />
@@ -161,15 +161,23 @@ export default function LandingPage() {
                 </div>
 
                 <div className="mb-8 w-full">
-                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-2 text-center">RATINGS</p>
-                  <div className="flex gap-2 justify-center py-6">
-                    {[1, 2, 3, 4].map((i) => (
-                      <Star key={i} className="w-10 h-10 fill-yellow-500 text-yellow-500" />
-                    ))}
-                    <div className="relative w-10 h-10">
-                      <Star className="w-10 h-10 text-yellow-500" />
-                      <div className="absolute inset-0 overflow-hidden w-[50%]">
-                        <Star className="w-10 h-10 fill-yellow-500 text-yellow-500" />
+                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-2 text-center">Student Ratings</p>
+                  <div 
+                    className="flex flex-col items-center gap-2 py-6 cursor-pointer hover:opacity-80 transition-opacity"
+                    onClick={() => {
+                      document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    <span className="font-bold text-2xl text-yellow-600">4.5</span>
+                    <div className="flex gap-2 justify-center">
+                      {[1, 2, 3, 4].map((i) => (
+                        <Star key={i} className="w-10 h-10 fill-yellow-500 text-yellow-500 stroke-[3px]" />
+                      ))}
+                      <div className="relative w-10 h-10">
+                        <Star className="w-10 h-10 text-yellow-500 stroke-[3px]" />
+                        <div className="absolute inset-0 overflow-hidden w-[50%]">
+                          <Star className="w-10 h-10 fill-yellow-500 text-yellow-500 stroke-[3px]" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -201,7 +209,7 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-background">
+      <section id="testimonials" className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
