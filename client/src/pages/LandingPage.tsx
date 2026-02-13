@@ -42,7 +42,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-20 md:pt-32 pb-20 md:pb-32 overflow-hidden">
+      <section className="relative pt-12 md:pt-32 pb-20 md:pb-32 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
@@ -90,7 +90,7 @@ export default function LandingPage() {
             <ReasonCard 
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
               title="You’re Getting a $100 Value For $20"
-              description="Books and courses teaching these same systems cost $100+. For a limited time, you get this framework completely free. Save money and save months of stress."
+              description="As an exclusive offer, get this framework at a fraction of its price. Save money and save months of stress."
               delay={0}
             />
             <ReasonCard 
@@ -161,22 +161,22 @@ export default function LandingPage() {
                 </div>
 
                 <div className="mb-8 w-full">
-                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-2 text-center">Student Ratings</p>
+                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-1 text-center">Student Ratings</p>
                   <div 
-                    className="flex flex-col items-center gap-2 py-6 cursor-pointer hover:opacity-80 transition-opacity"
+                    className="flex flex-col items-center gap-1 py-4 cursor-pointer hover:opacity-80 transition-opacity"
                     onClick={() => {
                       document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                   >
-                    <span className="font-bold text-2xl text-yellow-600">4.5</span>
+                    <span className="font-bold text-2xl text-muted-foreground">4.5</span>
                     <div className="flex gap-2 justify-center">
                       {[1, 2, 3, 4].map((i) => (
-                        <Star key={i} className="w-10 h-10 fill-yellow-500 text-yellow-500 stroke-[3px]" />
+                        <Star key={i} className="w-10 h-10 fill-[#FFD700] text-[#FFD700] stroke-[3px]" />
                       ))}
                       <div className="relative w-10 h-10">
-                        <Star className="w-10 h-10 text-yellow-500 stroke-[3px]" />
+                        <Star className="w-10 h-10 text-[#FFD700] stroke-[3px]" />
                         <div className="absolute inset-0 overflow-hidden w-[50%]">
-                          <Star className="w-10 h-10 fill-yellow-500 text-yellow-500 stroke-[3px]" />
+                          <Star className="w-10 h-10 fill-[#FFD700] text-[#FFD700] stroke-[3px]" />
                         </div>
                       </div>
                     </div>
