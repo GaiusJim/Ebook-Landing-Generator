@@ -62,7 +62,7 @@ export default function LandingPage() {
                 Are You Ready to <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Take Back Control</span> of Your Time?
               </h1>
               <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-6">
-                A proven framework to write, research, and submit without burning out.
+                A proven framework to write, research, and submit without burnout.
               </p>
             </motion.div>
           </div>
