@@ -112,6 +112,36 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* How This Book Helps Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              How This Book Helps You
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
+              {[
+                "Regain control over your time.",
+                "Reduce friction and hesitation.",
+                "Build steady weekly progress.",
+                "Lower mental noise and guilt.",
+                "Reclaim 7–14 hours a week over time.",
+                "Work with calm structure instead of pressure.",
+                "Build habits that outlast graduate school.",
+                "Avoid burnout through intelligent pacing.",
+                "Stop relying on motivation.",
+                "Become a capable, self-directed graduate student."
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-lg text-slate-700">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Transformation Block */}
       <section className="py-16 bg-slate-50 border-y border-border/50">
         <div className="container mx-auto px-4">
