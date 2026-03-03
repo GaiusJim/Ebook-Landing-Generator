@@ -380,28 +380,28 @@ export default function LandingPage() {
               category="Time & Productivity"
               quote="This book helped me reclaim at least 7 hours a week. I finally have my weekends back."
               author="David A."
-              role="MSc Student"
+              role="MSc Student, UK"
               delay={0}
             />
             <TestimonialCard 
               category="Mental Clarity"
               quote="I’d been stuck on my thesis for months. The system is simple but incredibly effective."
               author="Maria P."
-              role="PhD Candidate"
+              role="PhD Candidate, Canada"
               delay={1}
             />
             <TestimonialCard 
               category="Practicality"
               quote="Short, clear, and full of actionable steps. Most productivity books are too long, this one is perfect."
               author="James L."
-              role="MA Researcher"
+              role="MA Researcher, Australia"
               delay={2}
             />
             <TestimonialCard 
               category="Progress"
               quote="This isn’t about pep talks. I finally broke the cycle of guilt and procrastination."
               author="Sarah K."
-              role="PhD Student"
+              role="PhD Student, USA"
               delay={3}
             />
           </div>
