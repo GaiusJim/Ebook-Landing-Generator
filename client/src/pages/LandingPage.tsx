@@ -35,14 +35,11 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-display font-bold text-xl tracking-tight">
           </div>
-          <a href="#offer" className="block text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
-            Get the eBook
-          </a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-12 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+      <section className="relative pt-6 md:pt-16 pb-16 md:pb-24 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
