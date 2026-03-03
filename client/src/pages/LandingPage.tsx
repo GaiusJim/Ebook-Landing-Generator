@@ -84,7 +84,7 @@ export default function LandingPage() {
                   className="w-full max-w-sm text-lg py-7"
                   onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Get Instant Access — $20
+                  Yes- I Want 7+ Hours Back
                 </CtaButton>
                 <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-medium text-muted-foreground/80">
                   <span className="flex items-center gap-1">✔ Read in a weekend</span>
@@ -226,7 +226,7 @@ export default function LandingPage() {
                   document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Get Instant Access — $20
+                Get the Thesis System
               </CtaButton>
             </div>
           </div>
@@ -292,7 +292,7 @@ export default function LandingPage() {
 
               <div className="p-6 md:p-12 flex flex-col justify-center">
                 <div className="mb-8 text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Get Instant Access — $20</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Start Saving 7+ Hours a Week</h3>
                   <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
                     <span className="text-3xl md:text-4xl font-bold text-red-600 line-through opacity-80 decoration-2">$100.00</span>
                     <span className="text-4xl md:text-5xl font-bold text-primary">$20.00</span>
@@ -330,7 +330,7 @@ export default function LandingPage() {
                     onClick={() => window.location.href = "https://ebook.gaiusjimedits.com/b/hoREr/af697751fa02bf6"}
                     className="w-full min-h-[56px] py-3 px-6 text-center text-sm font-bold bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800 rounded-xl shadow-none active:scale-[0.98] transition-all"
                   >
-                    Get Instant Access — $20
+                    Start Saving 7+ Hours a Week
                   </button>
                   
                   <button 
@@ -421,7 +421,7 @@ export default function LandingPage() {
             className="w-full max-w-sm text-lg py-7 mb-4"
             onClick={() => window.location.href = "https://ebook.gaiusjimedits.com/b/hoREr/af697751fa02bf6"}
           >
-            Get Instant Access — $20
+            Yes- I'm Ready to Finish
           </CtaButton>
           <p className="text-slate-400">
             One-time payment. Instant download.
