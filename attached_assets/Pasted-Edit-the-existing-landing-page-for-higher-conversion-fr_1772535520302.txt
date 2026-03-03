@@ -1,0 +1,151 @@
+Edit the existing landing page for higher conversion from cold paid ad traffic.
+
+Do NOT redesign the entire page.
+Do NOT change branding or color scheme.
+Do NOT remove existing layout structure.
+
+Focus on copy, hierarchy, clarity, and conversion performance.
+
+Apply the following precise changes:
+
+1️⃣ HERO SECTION CHANGES
+
+Replace headline “Get Full Access Today” with:
+
+“Procrastinating Your Thesis Again?”
+
+Replace subheadline with:
+
+“A practical system that helps graduate students start faster, focus longer, and finally finish what they begin.”
+
+Remove the “95% Success Rate” claim entirely.
+
+Keep the $100 → $20 anchor, but add beneath price:
+
+“$20 one-time payment. Instant download. Yours forever.”
+
+Change main CTA button text to:
+
+“Get Instant Access — $20”
+
+Change secondary button text to:
+
+“I’ll try to fix it on my own.”
+
+Add small trust line below CTA:
+
+“PDF + EPUB • Secure checkout • 7-day simple refund”
+
+2️⃣ ADD TRANSFORMATION BLOCK (Below Hero)
+
+Insert a new section:
+
+Heading:
+“What Changes After You Apply This System”
+
+Two-column format:
+
+Before:
+• You delay starting
+• You feel overwhelmed
+• Deadlines create anxiety
+• You start but don’t finish
+
+After:
+• You know exactly what to work on daily
+• You use short focus blocks
+• You define clear finish lines
+• You make visible weekly progress
+
+Keep it minimal and scannable.
+
+3️⃣ TESTIMONIAL IMPROVEMENTS
+
+Replace single-letter names (T, M, P) with realistic formatted names:
+
+Example format:
+“David A. – MSc Student”
+“Maria P. – PhD Candidate”
+
+Keep ratings visible.
+
+Reduce padding so testimonials feel tighter and more credible.
+
+4️⃣ REFRAME “5 REASONS” SECTION
+
+Keep structure but update headings to be more emotionally direct:
+
+Change headings to:
+
+“Stop Paying With Stress”
+
+“Built for Real Graduate Life”
+
+“Short Enough to Finish”
+
+“A Clear System, Not Motivation”
+
+“Low Risk, High Return”
+
+Keep existing paragraph structure but tighten wording to be sharper and more direct.
+
+5️⃣ ADD “WHO THIS IS FOR” SECTION
+
+Insert a short filter section before testimonials:
+
+Heading:
+“This Is For You If…”
+
+Bullets:
+• You delay writing until pressure forces you
+• You struggle starting research work
+• You want structure, not motivation
+
+Add sub-section:
+
+“Not For You If…”
+
+• You want hype instead of systems
+• You won’t apply simple steps
+
+6️⃣ ADD GUARANTEE SECTION
+
+Before final CTA, insert:
+
+Heading:
+“7-Day Simple Guarantee”
+
+Text:
+“If you read it and feel it’s not helpful, email within 7 days for a refund.”
+
+Keep clean and minimal.
+
+7️⃣ FINAL CTA SECTION
+
+Replace closing copy with:
+
+“You can keep struggling with procrastination.
+Or you can fix the system for $20.”
+
+Button:
+“Get Instant Access — $20”
+
+Add price reminder below button:
+“One-time payment. Instant download.”
+
+8️⃣ MOBILE OPTIMIZATION
+
+Reduce vertical spacing between sections.
+
+Ensure CTA appears within first scroll on mobile.
+
+Keep price visible near button.
+
+Compress large image assets.
+
+Goal:
+Increase clarity, emotional alignment with paid ads, trust, and mobile conversion rate.
+
+Do not overcomplicate.
+Do not add new design styles.
+Prioritize performance.

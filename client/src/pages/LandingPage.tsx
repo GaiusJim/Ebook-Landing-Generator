@@ -42,44 +42,125 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-12 md:pt-32 pb-20 md:pb-32 overflow-hidden">
+      <section className="relative pt-12 md:pt-32 pb-16 md:pb-24 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="max-w-4xl mx-auto text-center mb-8">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent-foreground border border-accent/20 mb-8 font-medium text-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent-foreground border border-accent/20 mb-6 font-medium text-sm">
                 <span className="w-2 h-2 rounded-full bg-accent" />
                 Exclusive Offer
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-[1.4] lg:leading-[1.25] mb-6 text-foreground px-2">
-                Are You Ready to <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Take Back Control</span> of Your Time?
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight md:leading-[1.4] lg:leading-[1.2] mb-6 text-foreground px-2">
+                Procrastinating Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Thesis Again?</span>
               </h1>
-              <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-6">
-                A proven framework to write, research, and submit without burnout.
+              <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-6 mb-8">
+                A practical system that helps graduate students start faster, focus longer, and finally finish what they begin.
               </p>
+              
+              <div className="flex flex-col items-center gap-4">
+                <div className="flex items-center gap-4">
+                  <span className="text-2xl md:text-3xl font-bold text-red-600 line-through opacity-80 decoration-2">$100</span>
+                  <span className="text-4xl md:text-5xl font-bold text-primary">$20</span>
+                </div>
+                <p className="text-sm text-muted-foreground font-medium">
+                  $20 one-time payment. Instant download. Yours forever.
+                </p>
+                <CtaButton 
+                  variant="primary" 
+                  size="lg"
+                  className="w-full max-w-sm text-lg py-7"
+                  onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Get Instant Access — $20
+                </CtaButton>
+                <button 
+                  onClick={handleNegativeCta}
+                  className="text-sm text-muted-foreground hover:text-destructive transition-colors underline underline-offset-4"
+                >
+                  I’ll try to fix it on my own.
+                </button>
+                <p className="text-xs text-muted-foreground mt-2">
+                  PDF + EPUB • Secure checkout • 7-day simple refund
+                </p>
+              </div>
             </motion.div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-8 text-center text-sm text-muted-foreground flex items-center justify-center gap-6">
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-primary" /> Proven System</span>
-            <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-primary" /> 95% Success Rate</span>
+      {/* Transformation Block */}
+      <section className="py-16 bg-slate-50 border-y border-border/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              What Changes After You Apply This System
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-red-100">
+                <h3 className="text-xl font-bold text-red-600 mb-6 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-red-600" /> Before
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3 text-slate-600">
+                    <span className="text-red-400 mt-1">•</span>
+                    <span>You delay starting</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-600">
+                    <span className="text-red-400 mt-1">•</span>
+                    <span>You feel overwhelmed</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-600">
+                    <span className="text-red-400 mt-1">•</span>
+                    <span>Deadlines create anxiety</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-600">
+                    <span className="text-red-400 mt-1">•</span>
+                    <span>You start but don’t finish</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-primary/20">
+                <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary" /> After
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3 text-slate-600">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span>You know exactly what to work on daily</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-600">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span>You use short focus blocks</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-600">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span>You define clear finish lines</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-slate-600">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span>You make visible weekly progress</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Reasons Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-20 bg-white relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-5xl font-bold mb-4 px-4">
-              🔥 5 Reasons You Should Get This Book Today
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 px-4">
+              Stop Paying With Stress
             </h2>
             <p className="text-lg text-muted-foreground font-light px-4">
               (While It’s Still Affordable)
@@ -89,39 +170,39 @@ export default function LandingPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <ReasonCard 
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
-              title="You’re Getting a $100 Value For $20"
-              description="As an exclusive offer, get this framework at a fraction of its price. Save money and save months of stress."
+              title="Low Risk, High Return"
+              description="Get this framework at a fraction of its value. Save months of stress and avoid expensive delays in your graduation."
               delay={0}
             />
             <ReasonCard 
               icon={<Clock className="w-8 h-8 text-blue-500" />}
-              title="Short, Practical & Made for Students"
-              description="Not a 300-page theory book. It’s straight to the point. Finish within a week and start applying it today—even if you’re overwhelmed."
+              title="Built for Real Graduate Life"
+              description="Made for students juggling research, classes, and life. Start applying it today—even if your schedule is already packed."
               delay={1}
             />
             <ReasonCard 
               icon={<BrainCircuit className="w-8 h-8 text-purple-500" />}
-              title="A Real Solution to a Real Problem"
-              description="65% of grad students struggle with procrastination. You’re not lazy; you just need a system. This book gives you the better system you need."
+              title="A Real Solution"
+              description="Most students struggle with procrastination. You're not lazy; you just need a system that works with your brain, not against it."
               delay={2}
             />
             <ReasonCard 
               icon={<BookOpen className="w-8 h-8 text-orange-500" />}
-              title="A Clear System, Not Just Motivation"
-              description="Stop relying on willpower. Get a step-by-step plan and simple daily structure for research, writing, and deadlines that actually sticks."
+              title="A Clear System, Not Motivation"
+              description="Stop relying on willpower. Get a step-by-step plan for research and writing that turns 'I should' into 'I'm done'."
               delay={3}
             />
             <ReasonCard 
               icon={<CheckCircle2 className="w-8 h-8 text-teal-500" />}
-              title="Nothing to Lose, Everything to Gain"
-              description="It’s focused, short, and practical. Worst case: you get a few ideas. Best case: you finally break the procrastination cycle for good."
+              title="Short Enough to Finish"
+              description="Not a 300-page theory book. Straight to the point so you can finish it in an afternoon and start seeing progress by tomorrow."
               delay={4}
             />
             
             {/* CTA in the grid */}
             <div className="bg-[#1A2B48] text-background p-8 rounded-2xl flex flex-col justify-center items-center text-center shadow-xl">
-              <h3 className="text-2xl font-bold mb-4 text-white">Stop Paying with Stress</h3>
-              <p className="mb-6 opacity-80">You’re already paying for procrastination. Right now, fixing it costs less than a Netflix subscription.</p>
+              <h3 className="text-2xl font-bold mb-4 text-white">Fix the System</h3>
+              <p className="mb-6 opacity-80">Right now, fixing your procrastination costs less than a single late fee or a Netflix subscription.</p>
               <CtaButton 
                 variant="primary" 
                 className="w-full"
@@ -129,15 +210,53 @@ export default function LandingPage() {
                   document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Get It Now
+                Get Instant Access — $20
               </CtaButton>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Filter Section */}
+      <section className="py-20 bg-slate-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold mb-8">This Is For You If…</h2>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span>You delay writing until pressure forces you</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span>You struggle starting research work</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span>You want structure, not motivation</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold mb-8 opacity-60">Not For You If…</h2>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 opacity-60">
+                  <X className="w-6 h-6 text-red-400 shrink-0 mt-0.5" />
+                  <span>You want hype instead of systems</span>
+                </li>
+                <li className="flex items-start gap-3 opacity-60">
+                  <X className="w-6 h-6 text-red-400 shrink-0 mt-0.5" />
+                  <span>You won’t apply simple steps</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Offer Section */}
-      <section id="offer" className="py-24 bg-muted/30 border-y border-border/50">
+      <section id="offer" className="py-20 bg-muted/30 border-y border-border/50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-border/50">
             <div className="grid md:grid-cols-2">
@@ -153,11 +272,14 @@ export default function LandingPage() {
 
               <div className="p-6 md:p-12 flex flex-col justify-center">
                 <div className="mb-8 text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Get Full Access Today</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Get Instant Access — $20</h3>
                   <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
                     <span className="text-3xl md:text-4xl font-bold text-red-600 line-through opacity-80 decoration-2">$100.00</span>
                     <span className="text-4xl md:text-5xl font-bold text-primary">$20.00</span>
                   </div>
+                  <p className="mt-4 text-sm text-muted-foreground">
+                    One-time payment. Instant download.
+                  </p>
                 </div>
 
                 <div className="mb-8 w-full">
@@ -171,12 +293,12 @@ export default function LandingPage() {
                     <span className="font-bold text-2xl text-muted-foreground">4.5</span>
                     <div className="flex gap-2 justify-center">
                       {[1, 2, 3, 4].map((i) => (
-                        <Star key={i} className="w-10 h-10 fill-[#FFD700] text-[#FFD700] stroke-[3px]" />
+                        <Star key={i} className="w-8 h-8 fill-[#FFD700] text-[#FFD700] stroke-[3px]" />
                       ))}
-                      <div className="relative w-10 h-10">
-                        <Star className="w-10 h-10 text-[#FFD700] stroke-[3px]" />
+                      <div className="relative w-8 h-8">
+                        <Star className="w-8 h-8 text-[#FFD700] stroke-[3px]" />
                         <div className="absolute inset-0 overflow-hidden w-[50%]">
-                          <Star className="w-10 h-10 fill-[#FFD700] text-[#FFD700] stroke-[3px]" />
+                          <Star className="w-8 h-8 fill-[#FFD700] text-[#FFD700] stroke-[3px]" />
                         </div>
                       </div>
                     </div>
@@ -186,9 +308,9 @@ export default function LandingPage() {
                 <div className="flex flex-col gap-3">
                   <button 
                     onClick={() => window.location.href = "https://ebook.gaiusjimedits.com/b/hoREr/af697751fa02bf6"}
-                    className="w-full min-h-[56px] py-3 px-6 text-center text-xs font-medium bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800 rounded-xl shadow-none active:scale-[0.98] transition-all"
+                    className="w-full min-h-[56px] py-3 px-6 text-center text-sm font-bold bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800 rounded-xl shadow-none active:scale-[0.98] transition-all"
                   >
-                    Save me 8-12 hours a week
+                    Get Instant Access — $20
                   </button>
                   
                   <button 
@@ -200,7 +322,7 @@ export default function LandingPage() {
                 </div>
                 
                 <p className="mt-6 text-xs text-center text-muted-foreground">
-                  Secure Download • Instant Access
+                  Secure Download • Instant Access • 7-day refund
                 </p>
               </div>
             </div>
@@ -208,10 +330,23 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Guarantee Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center max-w-2xl">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
+            <ShieldCheck className="w-8 h-8" />
+          </div>
+          <h2 className="text-3xl font-bold mb-4">7-Day Simple Guarantee</h2>
+          <p className="text-lg text-muted-foreground">
+            If you read it and feel it’s not helpful, email within 7 days for a refund.
+          </p>
+        </div>
+      </section>
+
       {/* Testimonials */}
-      <section id="testimonials" className="py-24 bg-background">
+      <section id="testimonials" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               What People Are Saying
             </h2>
@@ -224,32 +359,53 @@ export default function LandingPage() {
             <TestimonialCard 
               category="Time & Productivity"
               quote="This book helped me reclaim at least 7 hours a week. I finally have my weekends back."
-              author="Sarah"
-              role="Master’s Student"
+              author="David A."
+              role="MSc Student"
               delay={0}
             />
             <TestimonialCard 
               category="Mental Clarity"
               quote="I’d been stuck on my thesis for months. The system is simple but incredibly effective."
-              author="Rina"
-              role="Grad Researcher"
+              author="Maria P."
+              role="PhD Candidate"
               delay={1}
             />
             <TestimonialCard 
               category="Practicality"
               quote="Short, clear, and full of actionable steps. Most productivity books are too long, this one is perfect."
-              author="Maria"
-              role="Master’s Student"
+              author="James L."
+              role="MA Researcher"
               delay={2}
             />
             <TestimonialCard 
               category="Progress"
               quote="This isn’t about pep talks. I finally broke the cycle of guilt and procrastination."
-              author="Alex"
-              role="Research Assistant"
+              author="Sarah K."
+              role="PhD Student"
               delay={3}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 bg-[#1A2B48] text-white">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            You can keep struggling with procrastination.<br />
+            Or you can fix the system for $20.
+          </h2>
+          <CtaButton 
+            variant="primary" 
+            size="lg"
+            className="w-full max-w-sm text-lg py-7 mb-4"
+            onClick={() => window.location.href = "https://ebook.gaiusjimedits.com/b/hoREr/af697751fa02bf6"}
+          >
+            Get Instant Access — $20
+          </CtaButton>
+          <p className="text-slate-400">
+            One-time payment. Instant download.
+          </p>
         </div>
       </section>
 
