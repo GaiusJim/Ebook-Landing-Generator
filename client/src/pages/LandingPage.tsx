@@ -62,7 +62,7 @@ export default function LandingPage() {
                 Procrastinating Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Thesis Again?</span>
               </h1>
               <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-6 mb-8">
-                A practical system that helps graduate students start faster, focus longer, and finally finish what they begin.
+                A simple, practical system that helps graduate students stop delaying, start faster, and finally finish their thesis without burnout.
               </p>
               
               <div className="flex flex-col items-center gap-4">
@@ -70,9 +70,14 @@ export default function LandingPage() {
                   <span className="text-2xl md:text-3xl font-bold text-red-600 line-through opacity-80 decoration-2">$100</span>
                   <span className="text-4xl md:text-5xl font-bold text-primary">$20</span>
                 </div>
-                <p className="text-sm text-muted-foreground font-medium">
-                  $20 one-time payment. Instant download. Yours forever.
-                </p>
+                <div className="text-center">
+                  <p className="text-sm text-muted-foreground font-medium">
+                    $20 one-time payment. Instant download. Yours forever.
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    That’s less than one late submission fee.
+                  </p>
+                </div>
                 <CtaButton 
                   variant="primary" 
                   size="lg"
@@ -81,9 +86,14 @@ export default function LandingPage() {
                 >
                   Get Instant Access — $20
                 </CtaButton>
+                <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-medium text-muted-foreground/80">
+                  <span className="flex items-center gap-1">✔ Read in a weekend</span>
+                  <span className="flex items-center gap-1">✔ Apply immediately</span>
+                  <span className="flex items-center gap-1">✔ Instant download</span>
+                </div>
                 <button 
                   onClick={handleNegativeCta}
-                  className="text-sm text-muted-foreground hover:text-destructive transition-colors underline underline-offset-4"
+                  className="text-sm text-muted-foreground hover:text-destructive transition-colors underline underline-offset-4 mt-2"
                 >
                   I’ll try to fix it on my own.
                 </button>
@@ -92,6 +102,12 @@ export default function LandingPage() {
                 </p>
               </div>
             </motion.div>
+          </div>
+          
+          <div className="text-center mt-12 mb-4">
+            <p className="text-sm text-muted-foreground italic opacity-80">
+              Designed specifically for graduate students struggling with thesis procrastination and research delays.
+            </p>
           </div>
         </div>
       </section>
@@ -111,11 +127,11 @@ export default function LandingPage() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3 text-slate-600">
                     <span className="text-red-400 mt-1">•</span>
-                    <span>You delay starting</span>
+                    <span>You open your laptop… and avoid starting</span>
                   </li>
                   <li className="flex items-start gap-3 text-slate-600">
                     <span className="text-red-400 mt-1">•</span>
-                    <span>You feel overwhelmed</span>
+                    <span>You don’t know what to work on first</span>
                   </li>
                   <li className="flex items-start gap-3 text-slate-600">
                     <span className="text-red-400 mt-1">•</span>
@@ -236,6 +252,10 @@ export default function LandingPage() {
                   <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                   <span>You want structure, not motivation</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <span>You’ve tried productivity advice but it didn’t stick</span>
+                </li>
               </ul>
             </div>
             <div>
@@ -338,7 +358,7 @@ export default function LandingPage() {
           </div>
           <h2 className="text-3xl font-bold mb-4">7-Day Simple Guarantee</h2>
           <p className="text-lg text-muted-foreground">
-            If you read it and feel it’s not helpful, email within 7 days for a refund.
+            Read it. Apply it. If it doesn’t help, email within 7 days for a full refund. No explanations needed.
           </p>
         </div>
       </section>
@@ -392,8 +412,8 @@ export default function LandingPage() {
       <section className="py-24 bg-[#1A2B48] text-white">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            You can keep struggling with procrastination.<br />
-            Or you can fix the system for $20.
+            You can keep procrastinating.<br />
+            Or you can fix the system this week for $20.
           </h2>
           <CtaButton 
             variant="primary" 

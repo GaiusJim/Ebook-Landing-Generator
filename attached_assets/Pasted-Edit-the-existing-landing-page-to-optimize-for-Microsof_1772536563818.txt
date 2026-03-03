@@ -1,0 +1,131 @@
+Edit the existing landing page to optimize for Microsoft Ads (search intent traffic).
+
+Do NOT redesign the page.
+Do NOT change branding, layout structure, or colors.
+Only refine copy, clarity, positioning, and trust elements.
+
+Apply the following precise improvements:
+
+1️⃣ HERO SUBHEAD REFINEMENT
+
+Replace the current subheadline under:
+
+“Procrastinating Your Thesis Again?”
+
+With:
+
+“A simple, practical system that helps graduate students stop delaying, start faster, and finally finish their thesis without burnout.”
+
+Make sure this remains concise and mobile-friendly.
+
+2️⃣ ADD MICRO-CONFIDENCE BULLETS UNDER MAIN CTA
+
+Directly below the green “Get Instant Access — $20” button, add three short inline bullets:
+
+✔ Read in a weekend
+✔ Apply immediately
+✔ Instant download
+
+Keep them visually subtle but clearly readable.
+
+3️⃣ STRENGTHEN PRICE JUSTIFICATION
+
+Under the line:
+
+“$20 one-time payment. Instant download. Yours forever.”
+
+Add:
+
+“That’s less than one late submission fee.”
+
+Keep tone professional, not dramatic.
+
+4️⃣ MAKE TRANSFORMATION SECTION MORE SPECIFIC
+
+In the “Before” column, change:
+
+“You delay starting”
+
+To:
+
+“You open your laptop… and avoid starting”
+
+Change:
+
+“You feel overwhelmed”
+
+To:
+
+“You don’t know what to work on first”
+
+Make it more specific and realistic.
+
+Do not expand the section. Keep same layout.
+
+5️⃣ IMPROVE “THIS IS FOR YOU” FILTER
+
+Under “This Is For You If…” add one more bullet:
+
+• You’ve tried productivity advice but it didn’t stick
+
+Keep consistent formatting.
+
+6️⃣ ADD SEARCH-ALIGNED CLARITY LINE
+
+Under the hero section (before testimonials), add a short SEO-aligned line:
+
+“Designed specifically for graduate students struggling with thesis procrastination and research delays.”
+
+Keep it subtle. This supports search alignment and relevance scoring.
+
+7️⃣ STRENGTHEN GUARANTEE SECTION
+
+Replace current guarantee text with:
+
+“Read it. Apply it. If it doesn’t help, email within 7 days for a full refund. No explanations needed.”
+
+Keep minimal styling.
+
+8️⃣ FINAL CTA REFINEMENT
+
+Replace:
+
+“You can keep struggling with procrastination.
+Or you can fix the system for $20.”
+
+With:
+
+“You can keep procrastinating.
+Or you can fix the system this week for $20.”
+
+Keep formatting identical.
+
+9️⃣ MOBILE OPTIMIZATION CHECK
+
+Ensure:
+
+CTA is visible within first scroll on mobile
+
+Price appears near CTA
+
+Section spacing is slightly tightened
+
+No excessive vertical whitespace
+
+Buttons remain prominent and above fold
+
+10️⃣ DO NOT ADD:
+
+Fake urgency timers
+
+Unverifiable statistics
+
+Aggressive sales language
+
+Popups
+
+Additional design elements
+
+Focus on clarity, credibility, and alignment with search intent traffic.
+
+Goal: Increase conversion rate from Microsoft Ads search traffic by improving specificity, trust, and keyword alignment — without redesigning the page.
