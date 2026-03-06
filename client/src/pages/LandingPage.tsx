@@ -197,9 +197,6 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-5xl font-bold mb-4 px-4">
               Stop Paying With Stress
             </h2>
-            <p className="text-lg text-muted-foreground font-light px-4">
-              (While It’s Still Affordable)
-            </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
