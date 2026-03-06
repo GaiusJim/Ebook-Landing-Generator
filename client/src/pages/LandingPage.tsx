@@ -307,9 +307,9 @@ export default function LandingPage() {
               </div>
 
               <div className="p-6 md:p-12 flex flex-col justify-center">
-                <div className="mb-8 text-center md:text-left">
+                <div className="mb-8 text-center">
                   <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Exclusive Offer</h3>
-                  <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
+                  <div className="flex items-center justify-center gap-4 mt-4">
                     <span className="text-3xl md:text-4xl font-bold text-red-600 line-through opacity-80 decoration-2">$100.00</span>
                     <span className="text-4xl md:text-5xl font-bold text-primary">$20.00</span>
                   </div>
