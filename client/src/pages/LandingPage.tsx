@@ -30,14 +30,6 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       
-      {/* Navigation / Header */}
-      <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/40 hidden md:block">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="font-display font-bold text-xl tracking-tight">
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative pt-6 md:pt-16 pb-16 md:pb-24 overflow-hidden">
         {/* Background Elements */}
