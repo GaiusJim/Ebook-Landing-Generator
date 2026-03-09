@@ -14,6 +14,12 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function LandingPage() {
   const { toast } = useToast();
@@ -195,7 +201,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 px-4">
-              Stop Paying With Stress
+              Why This Works
             </h2>
           </div>
 
@@ -353,7 +359,7 @@ export default function LandingPage() {
                     onClick={handleNegativeCta}
                     className="w-full min-h-[56px] py-3 px-6 text-center text-xs font-medium text-muted-foreground hover:text-destructive transition-colors border border-border rounded-xl active:scale-[0.98]"
                   >
-                    No, I'll be part of the 65% who struggle
+                    No thanks, I'll figure it out myself
                   </button>
                 </div>
                 
@@ -379,6 +385,55 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Common Questions
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-lg font-semibold">Is this just another productivity book?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  Not at all. Unlike most productivity books that focus on theory and research, this is a practical guide built specifically around the realities of graduate life in 2026. It covers the day-to-day challenges you actually face — not generic advice recycled from a business self-help shelf.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-lg font-semibold">How is this different from advice I've already tried?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  Most productivity guides try to be everything for everyone. This doesn't. It's built exclusively for 2026 — which means it addresses current challenges, current tools, and shows you exactly how to leverage today's AI to work smarter, not just harder. No outdated frameworks, no fluff.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-lg font-semibold">How long does it take to read?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  You can read through it in 2–7 days at your own pace, or grab the audio version and finish it in a single day. Either way, you'll have actionable steps before the week is out.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger className="text-lg font-semibold">Will this work for my specific situation?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  Yes — whether you're a Masters or PhD student, this guide is designed to meet you where you are. It will help you manage your research, thesis, or dissertation more effectively and finish on time, regardless of your field or stage.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <AccordionTrigger className="text-lg font-semibold">What's actually inside?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  Three things most guides skip entirely. First, it tackles the real, current struggles graduate students face today — not outdated scenarios. Second, it offers different strategies tailored to different types of procrastinators, because not everyone stalls for the same reason. Third, it walks you through practical, research-backed steps specifically designed for graduate-level work — the kind of structured guidance most academic productivity books never provide.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-6">
+                <AccordionTrigger className="text-lg font-semibold">What if it doesn't work for me?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  If you don't notice any meaningful change within 7 days of applying the system, email us and you'll receive a full refund — no explanations needed, no hoops to jump through.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section id="testimonials" className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -387,7 +442,7 @@ export default function LandingPage() {
               What People Are Saying
             </h2>
             <p className="text-xl text-muted-foreground">
-              Join hundreds of students reclaiming their time.
+              Join 100+ <span className="text-primary font-semibold">students</span> reclaiming their time.
             </p>
           </div>
 
