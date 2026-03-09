@@ -434,6 +434,19 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Guarantee Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center max-w-2xl">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
+            <ShieldCheck className="w-8 h-8" />
+          </div>
+          <h2 className="text-3xl font-bold mb-4">7-Day Simple Guarantee</h2>
+          <p className="text-lg text-muted-foreground">
+            Read it. Apply it. If it doesn't help, email within 7 days for a full refund. No explanations needed.
+          </p>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section id="testimonials" className="py-20 bg-background">
         <div className="container mx-auto px-4">
