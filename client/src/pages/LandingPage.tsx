@@ -118,12 +118,8 @@ export default function LandingPage() {
               {[
                 "Regain control over your time.",
                 "Reduce friction and hesitation.",
-                "Build steady weekly progress.",
                 "Lower mental noise and guilt.",
                 "Reclaim 7–14 hours a week over time.",
-                "Work with calm structure instead of pressure.",
-                "Build habits that outlast graduate school.",
-                "Avoid burnout through intelligent pacing.",
                 "Stop relying on motivation.",
                 "Become a capable, self-directed graduate student."
               ].map((item, index) => (
@@ -376,43 +372,43 @@ export default function LandingPage() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-left md:text-center mb-12">
               Common Questions
             </h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-lg font-semibold">Is this just another productivity book?</AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
+                <AccordionTrigger className="text-lg font-semibold text-left">Is this just another productivity book?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground text-left">
                   Not at all. Unlike most productivity books that focus on theory and research, this is a practical guide built specifically around the realities of graduate life in 2026. It covers the day-to-day challenges you actually face — not generic advice recycled from a business self-help shelf.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-lg font-semibold">How is this different from advice I've already tried?</AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
+                <AccordionTrigger className="text-lg font-semibold text-left">How is this different from advice I've already tried?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground text-left">
                   Most productivity guides try to be everything for everyone. This doesn't. It's built exclusively for 2026 — which means it addresses current challenges, current tools, and shows you exactly how to leverage today's AI to work smarter, not just harder. No outdated frameworks, no fluff.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-lg font-semibold">How long does it take to read?</AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
+                <AccordionTrigger className="text-lg font-semibold text-left">How long does it take to read?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground text-left">
                   You can read through it in 2–7 days at your own pace, or grab the audio version and finish it in a single day. Either way, you'll have actionable steps before the week is out.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger className="text-lg font-semibold">Will this work for my specific situation?</AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
+                <AccordionTrigger className="text-lg font-semibold text-left">Will this work for my specific situation?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground text-left">
                   Yes — whether you're a Masters or PhD student, this guide is designed to meet you where you are. It will help you manage your research, thesis, or dissertation more effectively and finish on time, regardless of your field or stage.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
-                <AccordionTrigger className="text-lg font-semibold">What's actually inside?</AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
+                <AccordionTrigger className="text-lg font-semibold text-left">What's actually inside?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground text-left">
                   Three things most guides skip entirely. First, it tackles the real, current struggles graduate students face today — not outdated scenarios. Second, it offers different strategies tailored to different types of procrastinators, because not everyone stalls for the same reason. Third, it walks you through practical, research-backed steps specifically designed for graduate-level work — the kind of structured guidance most academic productivity books never provide.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-6">
-                <AccordionTrigger className="text-lg font-semibold">What if it doesn't work for me?</AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
+                <AccordionTrigger className="text-lg font-semibold text-left">What if it doesn't work for me?</AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground text-left">
                   If you don't notice any meaningful change within 7 days of applying the system, email us and you'll receive a full refund — no explanations needed, no hoops to jump through.
                 </AccordionContent>
               </AccordionItem>
