@@ -63,8 +63,8 @@ export default function LandingPage() {
               
               <div className="flex flex-col items-center gap-4">
                 <div className="flex items-center gap-4">
-                  <span className="text-2xl md:text-3xl font-bold text-red-600 line-through opacity-80 decoration-2">$100</span>
-                  <span className="text-4xl md:text-5xl font-bold text-primary">$20</span>
+                  <span className="text-3xl md:text-4xl font-bold text-red-600 line-through opacity-80 decoration-2">$100</span>
+                  <span className="text-5xl md:text-6xl font-bold text-primary">$20</span>
                 </div>
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground font-medium">
@@ -183,7 +183,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              How This Book Helps You
+              How This System Helps You
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
               {[
@@ -268,7 +268,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 px-4">
-              Why This Works
+              Why This System Works
             </h2>
           </div>
 
@@ -506,10 +506,10 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              What People Are Saying
+              What Graduate Students Are Saying
             </h2>
             <p className="text-xl text-muted-foreground">
-              Join 100+ <span className="text-primary font-semibold">students</span> reclaiming their time.
+              Join 100+ <span className="text-primary font-semibold">graduate students</span> reclaiming their time.
             </p>
           </div>
 
@@ -559,7 +559,7 @@ export default function LandingPage() {
             className="w-full max-w-sm text-lg py-7 mb-4"
             onClick={() => window.location.href = "https://ebook.gaiusjimedits.com/b/hoREr/af697751fa02bf6"}
           >
-            Yes- I'm Ready to Finish
+            Get the Thesis System
           </CtaButton>
           <p className="text-slate-400">
             One-time payment. Instant download.
@@ -580,7 +580,7 @@ export default function LandingPage() {
             </div>
             <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                About Author
+                About The Author
               </h2>
               <p className="text-lg text-slate-700 leading-relaxed">
                 Gaius Jim is an academic copyeditor who helps graduate students present their research with clarity and confidence through reliable, professional academic editing services. Through his editing work, he has seen firsthand why many graduate students struggle to start and finish their thesis and has developed practical systems to overcome those blocks.
@@ -610,13 +610,7 @@ export default function LandingPage() {
 
 function ReasonCard({ icon, title, description, delay }: { icon: any, title: string, description: string, delay: number }) {
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: delay * 0.1, ease: "easeOut" }}
-      className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
-    >
+    <div className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group">
       <div className="mb-4 md:mb-6 p-3 bg-muted w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
@@ -624,6 +618,6 @@ function ReasonCard({ icon, title, description, delay }: { icon: any, title: str
       <p className="text-muted-foreground leading-relaxed">
         {description}
       </p>
-    </motion.div>
+    </div>
   );
 }
