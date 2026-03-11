@@ -611,10 +611,10 @@ export default function LandingPage() {
 function ReasonCard({ icon, title, description, delay }: { icon: any, title: string, description: string, delay: number }) {
   return (
     <motion.div 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: delay * 0.05 }}
+      transition={{ duration: 0.5, delay: delay * 0.1 }}
       className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
     >
       <div className="mb-4 md:mb-6 p-3 bg-muted w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
