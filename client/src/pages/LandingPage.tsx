@@ -147,8 +147,15 @@ export default function LandingPage() {
                   title: "Handle Deadlines with Confidence",
                   description: "Learn a clear approach for breaking large academic tasks into manageable steps so you can complete your work on time without last-minute panic."
                 }
-              ].map((item) => (
-                <div key={item.number} className="bg-white p-6 rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
+              ].map((item, index) => (
+                <motion.div
+                  key={item.number}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white p-6 rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow"
+                >
                   <div className="flex gap-4">
                     <div className="flex-shrink-0">
                       <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold">
@@ -164,7 +171,7 @@ export default function LandingPage() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
