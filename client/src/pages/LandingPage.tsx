@@ -108,6 +108,69 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* What This System Will Teach You Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              What This System Will Teach You
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  number: "1",
+                  title: "Understand Your Procrastination Pattern",
+                  description: "Discover the different types of procrastination that affect graduate students and learn how to identify your own pattern. Once you understand the real cause behind your delays, you can apply the right strategy instead of fighting the problem blindly."
+                },
+                {
+                  number: "2",
+                  title: "Start Working Even When Motivation Is Low",
+                  description: "Learn simple focus techniques that help you begin tasks quickly and build momentum. These practical methods remove the friction that often stops work before it even begins."
+                },
+                {
+                  number: "3",
+                  title: "Build Habits That Make Productivity Easier",
+                  description: "Instead of relying on bursts of motivation, you'll learn how to build small routines and systems that make steady progress part of your daily workflow."
+                },
+                {
+                  number: "4",
+                  title: "Use Tools and Technology to Manage Your Time Better",
+                  description: "Discover practical planning methods and modern tools—including AI—that can help you organize research, track tasks, and handle academic responsibilities more efficiently."
+                },
+                {
+                  number: "5",
+                  title: "Stay Productive Without Burning Out",
+                  description: "Graduate school can be demanding. This section provides practical ways to manage stress, protect your energy, and maintain a sustainable pace of work."
+                },
+                {
+                  number: "6",
+                  title: "Handle Deadlines with Confidence",
+                  description: "Learn a clear approach for breaking large academic tasks into manageable steps so you can complete your work on time without last-minute panic."
+                }
+              ].map((item) => (
+                <div key={item.number} className="bg-white p-6 rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0">
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold">
+                        {item.number}
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold mb-2 text-foreground">
+                        {item.title}
+                      </h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How This Book Helps Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
