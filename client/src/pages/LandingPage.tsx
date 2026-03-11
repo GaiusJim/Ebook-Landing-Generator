@@ -20,6 +20,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import gaiusPicture from "@assets/picture_1773216558545.png";
 
 export default function LandingPage() {
   const { toast } = useToast();
@@ -496,20 +497,41 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* About Me Section */}
+      <section className="py-20 bg-[#FFFBF6]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center">
+              <img 
+                src={gaiusPicture}
+                alt="Gaius Jim"
+                className="w-64 h-64 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                About Gaius Jim
+              </h2>
+              <p className="text-lg text-slate-700 leading-relaxed">
+                Gaius Jim is an academic copyeditor who helps graduate students present their research with clarity and confidence through reliable, professional academic editing services. Through his editing work, he has seen firsthand why many graduate students struggle to start and finish their thesis and has developed practical systems to overcome those blocks.
+              </p>
+              <a 
+                href="https://gaiusjimedits.com"
+                className="inline-block mt-8 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="py-12 bg-[#1A2B48] text-slate-400 border-t border-slate-800">
+      <footer className="py-8 bg-white border-t border-border/50">
         <div className="container mx-auto px-4 text-center">
-          <div className="font-display font-bold text-2xl text-white mb-6">
-            <a href="https://gaiusjimedits.com" className="hover:text-primary transition-colors">
-              Gaiusjimedits
-            </a>
-          </div>
-          <p className="mb-8 max-w-md mx-auto">
-            Helping graduate students present their research with clarity and confidence. Professional academic editing services you can trust.
-          </p>
-          <div className="text-sm">
+          <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Gaiusjimedits. All rights reserved.
-          </div>
+          </p>
         </div>
       </footer>
     </div>
