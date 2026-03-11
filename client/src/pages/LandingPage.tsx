@@ -505,12 +505,12 @@ export default function LandingPage() {
               <img 
                 src={gaiusPicture}
                 alt="Gaius Jim"
-                className="w-64 h-64 object-cover rounded-2xl shadow-lg"
+                className="w-64 h-64 object-cover rounded-full shadow-lg"
               />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                About Gaius Jim
+                About Author
               </h2>
               <p className="text-lg text-slate-700 leading-relaxed">
                 Gaius Jim is an academic copyeditor who helps graduate students present their research with clarity and confidence through reliable, professional academic editing services. Through his editing work, he has seen firsthand why many graduate students struggle to start and finish their thesis and has developed practical systems to overcome those blocks.
