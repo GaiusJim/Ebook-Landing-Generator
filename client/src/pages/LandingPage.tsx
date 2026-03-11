@@ -508,7 +508,7 @@ export default function LandingPage() {
                 className="w-64 h-64 object-cover rounded-full shadow-lg"
               />
             </div>
-            <div>
+            <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
                 About Author
               </h2>
