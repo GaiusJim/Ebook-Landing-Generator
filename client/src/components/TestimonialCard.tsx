@@ -16,7 +16,7 @@ export function TestimonialCard({ quote, author, role, category, delay = 0 }: Te
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: delay * 0.1 }}
+      transition={{ duration: 0.5, delay: delay * 0.1, ease: "easeOut" }}
       className="bg-white p-8 rounded-2xl shadow-lg border border-border/50 hover:shadow-xl transition-all duration-300 flex flex-col h-full relative"
     >
       <div className="absolute -top-3 -left-3 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold shadow-sm uppercase tracking-wider">

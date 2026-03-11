@@ -153,7 +153,7 @@ export default function LandingPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
                   className="bg-white p-6 rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow"
                 >
                   <div className="flex gap-4">
@@ -614,7 +614,7 @@ function ReasonCard({ icon, title, description, delay }: { icon: any, title: str
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: delay * 0.1 }}
+      transition={{ duration: 0.5, delay: delay * 0.1, ease: "easeOut" }}
       className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
     >
       <div className="mb-4 md:mb-6 p-3 bg-muted w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
