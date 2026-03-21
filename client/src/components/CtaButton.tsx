@@ -35,7 +35,7 @@ export function CtaButton({
   const baseStyles = "inline-flex flex-col items-center justify-center rounded-xl font-bold transition-transform transition-shadow duration-200 ease-out transform active:scale-[0.97] disabled:opacity-70 disabled:cursor-not-allowed group relative overflow-hidden will-change-transform";
   
   const variants = {
-    primary: "bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white shadow-xl shadow-green-900/20 hover:shadow-2xl hover:shadow-green-900/30 hover:-translate-y-1 border-b-4 border-green-800",
+    primary: "btn-breathe bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800",
     secondary: "bg-white text-destructive border-2 border-destructive hover:bg-destructive/5",
     outline: "bg-transparent border-2 border-foreground/20 hover:border-foreground/50 text-foreground",
   };

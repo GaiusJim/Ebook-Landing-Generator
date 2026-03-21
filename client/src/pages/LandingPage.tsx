@@ -22,35 +22,6 @@ import {
 } from "@/components/ui/accordion";
 import gaiusPicture from "@assets/picture_1773216558545.png";
 
-const ease = [0.22, 1, 0.36, 1] as const;
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 36 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.75, ease, delay },
-  }),
-};
-
-const fadeIn = {
-  hidden: { opacity: 0 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    transition: { duration: 0.65, ease, delay },
-  }),
-};
-
-const staggerContainer = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
-};
-
-const staggerItem = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
-};
-
 export default function LandingPage() {
   const { toast } = useToast();
 
@@ -100,7 +71,7 @@ export default function LandingPage() {
                     $20 one-time payment. Instant download. Yours forever.
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    That’s less than one late submission fee.
+                    That's less than one late submission fee.
                   </p>
                 </div>
                 <CtaButton 
@@ -120,7 +91,7 @@ export default function LandingPage() {
                   onClick={handleNegativeCta}
                   className="text-sm text-muted-foreground hover:text-destructive transition-colors underline underline-offset-4 mt-2"
                 >
-                  I’ll try to fix it on my own.
+                  I'll try to fix it on my own.
                 </button>
                 <p className="text-xs text-muted-foreground mt-2">
                   PDF + EPUB • Secure checkout • 7-day simple refund
@@ -141,15 +112,9 @@ export default function LandingPage() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-center mb-12"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               What This System Will Teach You
-            </motion.h2>
+            </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
@@ -217,22 +182,10 @@ export default function LandingPage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-center mb-12"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               How This System Helps You
-            </motion.h2>
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-            >
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
               {[
                 "Regain control over your time.",
                 "Reduce friction and hesitation.",
@@ -241,12 +194,12 @@ export default function LandingPage() {
                 "Stop relying on motivation.",
                 "Become a capable, self-directed graduate student."
               ].map((item, index) => (
-                <motion.div key={index} variants={staggerItem} className="flex items-start gap-3">
+                <div key={index} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                   <span className="text-lg text-slate-700">{item}</span>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -255,23 +208,11 @@ export default function LandingPage() {
       <section className="py-16 bg-slate-50 border-y border-border/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-center mb-12"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               What Changes After You Apply This System
-            </motion.h2>
-            <motion.div
-              className="grid md:grid-cols-2 gap-8 md:gap-12"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-            >
-              <motion.div variants={staggerItem} className="bg-white p-8 rounded-2xl shadow-sm border border-red-100">
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-red-100">
                 <h3 className="text-xl font-bold text-red-600 mb-6 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-red-600" /> Before
                 </h3>
@@ -282,7 +223,7 @@ export default function LandingPage() {
                   </li>
                   <li className="flex items-start gap-3 text-slate-600">
                     <span className="text-red-400 mt-1">•</span>
-                    <span>You don’t know what to work on first</span>
+                    <span>You don't know what to work on first</span>
                   </li>
                   <li className="flex items-start gap-3 text-slate-600">
                     <span className="text-red-400 mt-1">•</span>
@@ -290,11 +231,11 @@ export default function LandingPage() {
                   </li>
                   <li className="flex items-start gap-3 text-slate-600">
                     <span className="text-red-400 mt-1">•</span>
-                    <span>You start but don’t finish</span>
+                    <span>You start but don't finish</span>
                   </li>
                 </ul>
-              </motion.div>
-              <motion.div variants={staggerItem} className="bg-white p-8 rounded-2xl shadow-sm border border-primary/20">
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-primary/20">
                 <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary" /> After
                 </h3>
@@ -316,8 +257,8 @@ export default function LandingPage() {
                     <span>You make visible weekly progress</span>
                   </li>
                 </ul>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -326,24 +267,12 @@ export default function LandingPage() {
       <section className="py-20 bg-white relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <motion.h2
-              className="text-3xl md:text-5xl font-bold mb-4 px-4"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-            >
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 px-4">
               Why This System Works
-            </motion.h2>
+            </h2>
           </div>
 
-          <motion.div
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <ReasonCard 
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
               title="Low Risk, High Return"
@@ -376,7 +305,7 @@ export default function LandingPage() {
             />
             
             {/* CTA in the grid */}
-            <motion.div variants={staggerItem} className="bg-[#1A2B48] text-background p-8 rounded-2xl flex flex-col justify-center items-center text-center shadow-xl">
+            <div className="bg-[#1A2B48] text-background p-8 rounded-2xl flex flex-col justify-center items-center text-center shadow-xl">
               <h3 className="text-2xl font-bold mb-4 text-white">Fix the System</h3>
               <p className="mb-6 opacity-80">Right now, fixing your procrastination costs less than a single late fee or a Netflix subscription.</p>
               <CtaButton 
@@ -388,22 +317,16 @@ export default function LandingPage() {
               >
                 Get the Thesis System
               </CtaButton>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Filter Section */}
       <section className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
-            <motion.div variants={staggerItem}>
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+            <div>
               <h2 className="text-3xl font-bold mb-8">This Is For You If…</h2>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -420,11 +343,11 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                  <span>You’ve tried productivity advice but it didn’t stick</span>
+                  <span>You've tried productivity advice but it didn't stick</span>
                 </li>
               </ul>
-            </motion.div>
-            <motion.div variants={staggerItem}>
+            </div>
+            <div>
               <h2 className="text-3xl font-bold mb-8 opacity-60">Not For You If…</h2>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 opacity-60">
@@ -433,24 +356,18 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-start gap-3 opacity-60">
                   <X className="w-6 h-6 text-red-400 shrink-0 mt-0.5" />
-                  <span>You won’t apply simple steps</span>
+                  <span>You won't apply simple steps</span>
                 </li>
               </ul>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Offer Section */}
       <section id="offer" className="py-20 bg-muted/30 border-y border-border/50">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-border/50"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
+          <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-border/50">
             <div className="grid md:grid-cols-2">
               <div className="bg-slate-50 flex items-center justify-center relative overflow-hidden group">
                 <div className="relative z-10 w-full h-full">
@@ -500,7 +417,7 @@ export default function LandingPage() {
                 <div className="flex flex-col gap-3">
                   <button 
                     onClick={() => window.location.href = "https://ebook.gaiusjimedits.com/b/hoREr/af697751fa02bf6"}
-                    className="w-full min-h-[56px] py-3 px-6 text-center text-sm font-bold bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800 rounded-xl shadow-none active:scale-[0.98] transition-all"
+                    className="btn-breathe w-full min-h-[56px] py-3 px-6 text-center text-sm font-bold bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800 rounded-xl active:scale-[0.98] transition-transform"
                   >
                     Start Saving 7+ Hours a Week
                   </button>
@@ -518,7 +435,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -526,22 +443,9 @@ export default function LandingPage() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-left md:text-center mb-12"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold text-left md:text-center mb-12">
               Common Questions
-            </motion.h2>
-            <motion.div
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              custom={0.15}
-            >
+            </h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-lg font-semibold text-left">Is this just another productivity book?</AccordionTrigger>
@@ -580,20 +484,13 @@ export default function LandingPage() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Guarantee Section */}
       <section className="py-16 bg-white">
-        <motion.div
-          className="container mx-auto px-4 text-center max-w-2xl"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-        >
+        <div className="container mx-auto px-4 text-center max-w-2xl">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
             <ShieldCheck className="w-8 h-8" />
           </div>
@@ -601,34 +498,22 @@ export default function LandingPage() {
           <p className="text-lg text-muted-foreground">
             Read it. Apply it. If it doesn't help, email within 7 days for a full refund. No explanations needed.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       {/* Testimonials */}
       <section id="testimonials" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               What Graduate Students Are Saying
             </h2>
             <p className="text-xl text-muted-foreground">
               Join 100+ <span className="text-primary font-semibold">graduate students</span> reclaiming their time.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <TestimonialCard 
               category="Time & Productivity"
               quote="This book helped me reclaim at least 7 hours a week. I finally have my weekends back."
@@ -638,7 +523,7 @@ export default function LandingPage() {
             />
             <TestimonialCard 
               category="Mental Clarity"
-              quote="I’d been stuck on my thesis for months. The system is simple but incredibly effective."
+              quote="I'd been stuck on my thesis for months. The system is simple but incredibly effective."
               author="Anthony"
               role="PhD Candidate, Canada"
               delay={1}
@@ -652,24 +537,18 @@ export default function LandingPage() {
             />
             <TestimonialCard 
               category="Progress"
-              quote="This isn’t about pep talks. I finally broke the cycle of guilt and procrastination."
+              quote="This isn't about pep talks. I finally broke the cycle of guilt and procrastination."
               author="Qui"
               role="PhD Student, USA"
               delay={3}
             />
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Final CTA */}
       <section className="py-24 bg-[#1A2B48] text-white">
-        <motion.div
-          className="container mx-auto px-4 text-center max-w-3xl"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-        >
+        <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             You can keep procrastinating.<br />
             Or you can fix the system this week for $20.
@@ -685,27 +564,21 @@ export default function LandingPage() {
           <p className="text-slate-400">
             One-time payment. Instant download.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       {/* About Me Section */}
       <section className="py-20 bg-[#FFFBF6]">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
-            <motion.div variants={staggerItem} className="flex justify-center">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center">
               <img 
                 src={gaiusPicture}
                 alt="Gaius Jim"
                 className="w-64 h-64 object-cover rounded-full shadow-lg"
               />
-            </motion.div>
-            <motion.div variants={staggerItem} className="text-center md:text-left">
+            </div>
+            <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
                 About The Author
               </h2>
@@ -718,8 +591,8 @@ export default function LandingPage() {
               >
                 Learn More
               </a>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -737,10 +610,7 @@ export default function LandingPage() {
 
 function ReasonCard({ icon, title, description, delay }: { icon: any, title: string, description: string, delay: number }) {
   return (
-    <motion.div
-      variants={staggerItem}
-      className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
-    >
+    <div className="bg-background p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group">
       <div className="mb-4 md:mb-6 p-3 bg-muted w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
@@ -748,6 +618,6 @@ function ReasonCard({ icon, title, description, delay }: { icon: any, title: str
       <p className="text-muted-foreground leading-relaxed">
         {description}
       </p>
-    </motion.div>
+    </div>
   );
 }
