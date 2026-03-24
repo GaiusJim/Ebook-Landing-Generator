@@ -80,7 +80,7 @@ export default function LandingPage() {
                   className="w-full max-w-sm text-lg py-7"
                   onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Yes- I Want 7+ Hours Back
+                  Get the Thesis System
                 </CtaButton>
                 <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-medium text-muted-foreground/80">
                   <span className="flex items-center gap-1">✔ Read in a weekend</span>
@@ -315,7 +315,7 @@ export default function LandingPage() {
                   document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Get the Thesis System
+                Yes- I Want 7+ Hours Back
               </CtaButton>
             </div>
           </div>
@@ -419,7 +419,7 @@ export default function LandingPage() {
                     onClick={() => window.location.href = "https://ebook.gaiusjimedits.com/b/hoREr/af697751fa02bf6"}
                     className="btn-breathe w-full min-h-[56px] py-3 px-6 text-center text-sm font-bold bg-gradient-to-br from-[hsl(142,76%,45%)] to-[hsl(142,76%,35%)] text-white border-b-4 border-green-800 rounded-xl active:scale-[0.98] transition-transform"
                   >
-                    Start Saving 7+ Hours a Week
+                    Get the Thesis System
                   </button>
                   
                   <button 
@@ -559,7 +559,7 @@ export default function LandingPage() {
             className="w-full max-w-sm text-lg py-7 mb-4"
             onClick={() => window.location.href = "https://ebook.gaiusjimedits.com/b/hoREr/af697751fa02bf6"}
           >
-            Get the Thesis System
+            Start Saving 7+ Hours a Week
           </CtaButton>
           <p className="text-slate-400">
             One-time payment. Instant download.
