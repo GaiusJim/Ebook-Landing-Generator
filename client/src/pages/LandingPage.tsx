@@ -62,18 +62,6 @@ export default function LandingPage() {
               </p>
               
               <div className="flex flex-col items-center gap-4">
-                <div className="flex items-center gap-4">
-                  <span className="text-3xl md:text-4xl font-bold text-red-600 line-through opacity-80 decoration-2">$100</span>
-                  <span className="text-5xl md:text-6xl font-bold text-primary">$20</span>
-                </div>
-                <div className="text-center">
-                  <p className="text-sm text-muted-foreground font-medium">
-                    $20 one-time payment. Instant download. Yours forever.
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    That's less than one late submission fee.
-                  </p>
-                </div>
                 <CtaButton 
                   variant="primary" 
                   size="lg"
