@@ -380,24 +380,19 @@ export default function LandingPage() {
                 </div>
 
                 <div className="mb-8 w-full">
-                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-1 text-center">Student Ratings</p>
+                  <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-1 text-center">Graduate Students Ratings</p>
                   <div 
                     className="flex flex-col items-center gap-1 py-4 cursor-pointer hover:opacity-80 transition-opacity"
                     onClick={() => {
                       document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                   >
-                    <span className="font-bold text-2xl text-muted-foreground">4.5</span>
-                    <div className="flex gap-2 justify-center">
-                      {[1, 2, 3, 4].map((i) => (
-                        <Star key={i} className="w-8 h-8 fill-[#FFD700] text-[#FFD700] stroke-[3px]" />
+                    <span className="font-bold text-2xl text-muted-foreground">4.8</span>
+                    <div className="flex gap-1 justify-center items-center">
+                      {[0, 1, 2, 3].map((i) => (
+                        <StarIcon key={i} fill={1} id={`star-${i}`} />
                       ))}
-                      <div className="relative w-8 h-8">
-                        <Star className="w-8 h-8 text-[#FFD700] stroke-[3px]" />
-                        <div className="absolute inset-0 overflow-hidden w-[50%]">
-                          <Star className="w-8 h-8 fill-[#FFD700] text-[#FFD700] stroke-[3px]" />
-                        </div>
-                      </div>
+                      <StarIcon fill={0.8} id="star-4" />
                     </div>
                   </div>
                 </div>
@@ -593,6 +588,41 @@ export default function LandingPage() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function StarIcon({ fill = 1, id }: { fill?: number; id: string }) {
+  const gradId = `sg-${id}`;
+  const shineId = `ss-${id}`;
+  const starClipId = `stc-${id}`;
+  const fillClipId = `fc-${id}`;
+  const points = "12,1 14.95,8.8 23.01,9.27 17.13,14.97 19.06,23 12,18.4 4.94,23 6.87,14.97 0.99,9.27 9.05,8.8";
+  return (
+    <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0px 2px 3px rgba(0,0,0,0.35))' }}>
+      <defs>
+        <linearGradient id={gradId} x1="30%" y1="0%" x2="70%" y2="100%">
+          <stop offset="0%" stopColor="#FFF176" />
+          <stop offset="45%" stopColor="#FFD700" />
+          <stop offset="100%" stopColor="#B8720A" />
+        </linearGradient>
+        <linearGradient id={shineId} x1="0%" y1="0%" x2="40%" y2="70%">
+          <stop offset="0%" stopColor="white" stopOpacity="0.65" />
+          <stop offset="100%" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <clipPath id={starClipId}>
+          <polygon points={points} />
+        </clipPath>
+        <clipPath id={fillClipId}>
+          <rect x="0" y="0" width={24 * fill} height="24" />
+        </clipPath>
+      </defs>
+      <polygon points={points} fill="#D4B800" transform="translate(0.6,1.2)" opacity="0.4" />
+      <polygon points={points} fill="#E8D080" stroke="#C0A030" strokeWidth="0.3" strokeLinejoin="miter" />
+      <g clipPath={`url(#${fillClipId})`}>
+        <polygon points={points} fill={`url(#${gradId})`} stroke="#9A6800" strokeWidth="0.3" strokeLinejoin="miter" />
+        <ellipse cx="9" cy="8" rx="5" ry="3.5" fill={`url(#${shineId})`} clipPath={`url(#${starClipId})`} />
+      </g>
+    </svg>
   );
 }
 
